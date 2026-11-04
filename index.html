@@ -203,11 +203,15 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .fab{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:10px;background:#1d1d1f;color:#fff;border:none;border-radius:980px;padding:10px 20px 10px 10px;font:500 15px Inter,sans-serif;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .2s}
 .fab:hover{transform:translateY(-2px)}
 .fab .dot{width:32px;height:32px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-size:14px}
+.fab .dot.av{width:38px;height:38px;padding:2px;overflow:hidden}
+.fab .dot.av svg{display:block;width:100%;height:100%;border-radius:50%}
 .fab small{display:block;font-size:11px;color:#86868b;font-weight:400;text-align:left}
 .panel{position:fixed;right:22px;bottom:22px;z-index:70;width:min(400px,calc(100vw - 32px));height:min(580px,calc(100vh - 100px));background:rgba(255,255,255,.94);backdrop-filter:saturate(180%) blur(24px);-webkit-backdrop-filter:saturate(180%) blur(24px);border:1px solid rgba(0,0,0,.08);border-radius:24px;box-shadow:0 24px 60px rgba(0,0,0,.25);display:flex;flex-direction:column;overflow:hidden;transform:translateY(16px) scale(.98);opacity:0;pointer-events:none;transition:.25s ease}
 .panel.open{transform:none;opacity:1;pointer-events:auto}
 .phead{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid rgba(0,0,0,.06)}
 .phead .dot{width:36px;height:36px;border-radius:50%;background:var(--grad);flex:none;display:grid;place-items:center;color:#fff}
+.phead .dot.av{width:40px;height:40px;padding:2px;overflow:hidden}
+.phead .dot.av svg{display:block;width:100%;height:100%;border-radius:50%}
 .phead b{display:block;font-size:15px}
 .phead small{font-size:12px;color:var(--green)}
 .close{margin-left:auto;background:var(--grey2);border:none;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:15px;color:var(--muted)}
@@ -216,6 +220,8 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .m.bot{background:var(--grey2);align-self:flex-start;border-bottom-left-radius:6px}
 .m.me{background:var(--blue);color:#fff;align-self:flex-end;border-bottom-right-radius:6px}
 .m a{color:var(--blue);text-decoration:underline}
+.m .ans+.ans{margin-top:8px}
+.m .src{display:block;margin-top:8px;font-size:11px;color:#86868b}
 .typing{display:inline-flex;gap:4px}
 .typing i{width:6px;height:6px;border-radius:50%;background:#86868b;animation:blink 1s infinite}
 .typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
@@ -252,7 +258,7 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </head>
 <body>
 
-<div class="promo">Available Q1 2027 for HoD and Director roles. <a href="#checkout">Request a conversation</a></div>
+<div class="promo">Available Q1 2027 for Head of and Director roles. <a href="#checkout">Request a conversation</a></div>
 
 <nav aria-label="Main">
   <div class="wrap">
@@ -276,7 +282,7 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <!-- HERO -->
   <header class="hero">
     <div class="wrap">
-      <p class="eyebrow new rv">Curriculum Vitae - New Edition</p>
+      <p class="eyebrow new rv">New edition</p>
       <h1 class="h-xxl rv">Christopher<br>Simon Huggins.</h1>
       <p class="sub rv">Conversational AI and digital transformation leader.<br><span class="grad" style="font-weight:600">Engineered for enterprise AI.</span></p>
       <div class="ctas rv">
@@ -325,7 +331,7 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <section class="mission center">
     <div class="wrap">
       <p class="eyebrow rv" style="margin-bottom:22px">AI Enthusiast. Built in.</p>
-      <p class="big rv">Using tech &amp; innovation to <span class="grad">decrease customer anxiety &amp; confusion</span><span>, and increase velocity to resolution.</span></p>
+      <p class="big rv">Using tech &amp; innovation to <span class="grad">decrease customer anxiety &amp; confusion</span><span>, and accelerate the path to resolution.</span></p>
     </div>
   </section>
 
@@ -354,7 +360,7 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <article class="hl">
         <p class="eyebrow">Scale</p>
         <h3>18m+</h3>
-        <p>Customer interactions a year across AI bots, web chat and messaging.</p>
+        <p>Customer interactions a year across bots, web chat and messaging.</p>
         <svg viewBox="0 0 280 220" aria-hidden="true">
           <rect x="10" y="14" width="170" height="44" rx="22" fill="#2c2c2e"/><rect x="28" y="31" width="110" height="10" rx="5" fill="#636366"/>
           <rect x="100" y="70" width="170" height="44" rx="22" fill="#0071e3"/><rect x="118" y="87" width="120" height="10" rx="5" fill="#cfe5ff" opacity=".7"/>
@@ -366,7 +372,7 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <article class="hl">
         <p class="eyebrow">Efficiency</p>
         <h3>45%+</h3>
-        <p>AI bot containment: queries resolved without needing an adviser.</p>
+        <p>Bot containment: queries resolved without needing an adviser.</p>
         <svg viewBox="0 0 280 220" aria-hidden="true">
           <defs><linearGradient id="r1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#30d158"/><stop offset="1" stop-color="#2997ff"/></linearGradient></defs>
           <circle cx="140" cy="110" r="88" fill="none" stroke="#2c2c2e" stroke-width="22"/>
@@ -648,7 +654,7 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
                 <label class="opt"><input type="radio" name="topic" value="Consulting"><span>Consulting<small>Project or advisory</small></span></label>
                 <label class="opt"><input type="radio" name="topic" value="Conversational AI"><span>Conversational AI<small>Strategy or build</small></span></label>
                 <label class="opt"><input type="radio" name="topic" value="Digital Transformation"><span>Digital Transformation<small>Programme leadership</small></span></label>
-                <label class="opt full"><input type="radio" name="topic" value="Feedback on the microsite"><span>Just saying hi</span></label>
+                <label class="opt full"><input type="radio" name="topic" value="Just saying hi"><span>Just saying hi</span></label>
               </div>
             </fieldset>
             <label>First name<input name="first" required autocomplete="given-name"></label>
@@ -670,7 +676,7 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="fineprint">
       <span>Figures relate to roles at Virgin Media O2, Sitel Group UK and CCI South Africa. Results achieved with brilliant teams and partners.</span>
       <span>The Digital Specialist answers only from the information on this page. For anything else, contact Chris directly.</span>
-      <span>CSH stands for Christopher Simon Huggins.</span>
+      <span>Coffee not included.</span>
     </div>
     <div class="row"><span>© <span id="yr"></span> Christopher Simon Huggins. All rights reserved.</span><span>United Kingdom</span></div>
   </div>
@@ -680,9 +686,347 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <div class="toast" id="toast" role="status"><svg viewBox="0 0 36 36" aria-hidden="true"><rect x="2" y="2" width="32" height="32" rx="8" fill="#000" stroke="url(#g3)" stroke-width="2"/><text x="18" y="22" text-anchor="middle" font-family="Inter" font-weight="800" font-size="10" fill="#fff">CSH</text></svg><div><b>Added to your team.</b><br><span style="color:#a1a1a6">Complete your request below.</span></div></div>
 
 <!-- Specialist -->
-<button class="fab" data-open-twin aria-controls="twin"><span class="dot" aria-hidden="true">✦</span><span>Ask a Specialist<small>Chris's digital twin</small></span></button>
+<button class="fab" data-open-twin aria-controls="twin"><span class="dot av" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="215 125 370 370">
+  <defs>
+    <clipPath id="av-frame"><circle cx="400" cy="400" r="380"/></clipPath>
+    <radialGradient id="av-glowPurple" cx="0.12" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="#5b2a7a" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#5b2a7a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="av-glowRed" cx="0.85" cy="0.2" r="0.55">
+      <stop offset="0" stop-color="#7a1f3a" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#7a1f3a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="av-glowBlue" cx="0.6" cy="1" r="0.55">
+      <stop offset="0" stop-color="#23467a" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#23467a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="av-vignette" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.55"/>
+    </radialGradient>
+    <linearGradient id="av-neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="0.5" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#f43f6e"/>
+    </linearGradient>
+    <filter id="av-soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <pattern id="av-shadeDots" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2" fill="#3d2216" opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="#0b0a10"/>
+  <g>
+    <rect width="800" height="800" fill="#100d16"/>
+    <rect width="800" height="800" fill="url(#av-glowPurple)"/>
+    <rect width="800" height="800" fill="url(#av-glowRed)"/>
+    <rect width="800" height="800" fill="url(#av-glowBlue)"/>
+    <!-- faint circuit traces -->
+    <g fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2">
+      <path d="M60,250 H200 L230,280 V340"/>
+      <path d="M90,470 H210 L240,440"/>
+      <path d="M740,230 H610 L580,260 V320"/>
+      <path d="M720,500 H600 L570,470"/>
+      <path d="M150,140 V200 H220"/>
+      <path d="M650,130 V190 H580"/>
+      <path d="M120,580 H190"/>
+      <path d="M690,600 H620"/>
+    </g>
+    <g fill="#ffffff" fill-opacity="0.18">
+      <circle cx="230" cy="340" r="4"/><circle cx="240" cy="440" r="4"/>
+      <circle cx="580" cy="320" r="4"/><circle cx="570" cy="470" r="4"/>
+      <circle cx="220" cy="200" r="4"/><circle cx="580" cy="190" r="4"/>
+    </g>
+    <rect width="800" height="800" fill="url(#av-vignette)"/>
+
+    <!-- Shoulders / white shirt -->
+    <path d="M150,830 L150,800 C160,660 250,600 330,585 L470,585 C550,600 640,660 650,800 L650,830 Z" fill="#fbf8f1" stroke="#2b1a12" stroke-width="6"/>
+    <!-- shirt shading -->
+    <path d="M150,800 C158,700 200,650 250,620 C230,690 225,750 230,800 Z" fill="#e3dccd"/>
+    <path d="M650,800 C642,700 600,650 550,620 C570,690 575,750 570,800 Z" fill="#e3dccd"/>
+
+    <path d="M156,800 C166,668 252,608 330,592" fill="none" stroke="#3b82f6" stroke-width="5" opacity="0.8" stroke-linecap="round"/>
+    <path d="M644,800 C634,668 548,608 470,592" fill="none" stroke="#f43f6e" stroke-width="5" opacity="0.8" stroke-linecap="round"/>
+    <!-- Neck -->
+    <path d="M345,500 L345,600 Q400,640 455,600 L455,500 Z" fill="#6e4129" stroke="#2b1a12" stroke-width="6"/>
+    <path d="M345,540 Q400,590 455,540 L455,575 Q400,615 345,575 Z" fill="#53301e"/>
+
+    <!-- Collar -->
+    <path d="M335,575 L400,650 L360,690 L310,600 Z" fill="#ffffff" stroke="#2b1a12" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M465,575 L400,650 L440,690 L490,600 Z" fill="#ffffff" stroke="#2b1a12" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M400,650 L388,720 L400,800" fill="none" stroke="#2b1a12" stroke-width="4"/>
+    
+    <circle cx="398" cy="770" r="6" fill="#d9d2c3" stroke="#2b1a12" stroke-width="3"/>
+
+    <!-- Ears -->
+    <ellipse cx="268" cy="385" rx="26" ry="42" fill="#7a4a30" stroke="#2b1a12" stroke-width="6"/>
+    <ellipse cx="532" cy="385" rx="26" ry="42" fill="#7a4a30" stroke="#2b1a12" stroke-width="6"/>
+    <path d="M272,370 Q260,385 272,402" fill="none" stroke="#4a2a1a" stroke-width="4"/>
+    <path d="M528,370 Q540,385 528,402" fill="none" stroke="#4a2a1a" stroke-width="4"/>
+
+    <!-- Head (clean-shaven, defined jaw) -->
+    <path d="M280,300 C280,200 330,160 400,160 C470,160 520,200 520,300 L520,400 C520,470 480,540 400,555 C320,540 280,470 280,400 Z"
+          fill="#7a4a30" stroke="#2b1a12" stroke-width="6"/>
+    <!-- face shading (halftone) -->
+    <path d="M280,330 C285,450 320,530 400,555 C340,520 310,450 305,330 Z" fill="url(#av-shadeDots)"/>
+    <path d="M520,330 C515,450 480,530 400,555 C460,520 490,450 495,330 Z" fill="url(#av-shadeDots)"/>
+    <!-- neon rim light -->
+    <path d="M284,300 C282,220 330,166 400,164" fill="none" stroke="#3b82f6" stroke-width="5" opacity="0.85" stroke-linecap="round"/>
+    <path d="M284,320 L284,400 C284,465 318,530 392,551" fill="none" stroke="#6d7cf7" stroke-width="5" opacity="0.8" stroke-linecap="round"/>
+    <path d="M516,300 C518,220 470,166 400,164" fill="none" stroke="#c34cf0" stroke-width="5" opacity="0.85" stroke-linecap="round"/>
+    <path d="M516,320 L516,400 C516,465 482,530 408,551" fill="none" stroke="#f43f6e" stroke-width="5" opacity="0.8" stroke-linecap="round"/>
+    <!-- cheek highlights -->
+    <ellipse cx="335" cy="420" rx="22" ry="12" fill="#9a6444" opacity="0.7"/>
+    <ellipse cx="465" cy="420" rx="22" ry="12" fill="#9a6444" opacity="0.7"/>
+    <ellipse cx="400" cy="225" rx="50" ry="14" fill="#94603f" opacity="0.6"/>
+
+    <!-- Hair: close crop, greying -->
+    <path d="M278,310 C272,210 320,150 400,148 C480,150 528,210 522,310 C515,265 500,235 480,222 C440,205 360,205 320,222 C300,235 285,265 278,310 Z"
+          fill="#211c1a" stroke="#120c0a" stroke-width="6" stroke-linejoin="round"/>
+    <!-- grey temples -->
+    <path d="M280,300 C278,265 288,240 305,228 L300,300 Z" fill="#2a2523"/>
+    <path d="M520,300 C522,265 512,240 495,228 L500,300 Z" fill="#2a2523"/>
+
+    <g fill="#4a4340" opacity="0.9">
+      <circle cx="350" cy="180" r="3"/><circle cx="380" cy="170" r="3"/><circle cx="420" cy="172" r="3"/>
+      <circle cx="455" cy="182" r="3"/><circle cx="330" cy="200" r="3"/><circle cx="470" cy="200" r="3"/>
+      <circle cx="400" cy="188" r="3"/><circle cx="365" cy="195" r="3"/><circle cx="440" cy="196" r="3"/>
+    </g>
+
+    <!-- Eyebrows -->
+    <path d="M318,318 Q345,298 380,312 L378,324 Q348,314 320,330 Z" fill="#1e1612" stroke="#1e1612" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M482,318 Q455,298 420,312 L422,324 Q452,314 480,330 Z" fill="#1e1612" stroke="#1e1612" stroke-width="3" stroke-linejoin="round"/>
+
+    <!-- Eyes (smiling, slightly squinted) -->
+    <path d="M325,358 Q350,338 378,356 Q352,372 325,358 Z" fill="#fbf3e6" stroke="#2b1a12" stroke-width="4"/>
+    <path d="M475,358 Q450,338 422,356 Q448,372 475,358 Z" fill="#fbf3e6" stroke="#2b1a12" stroke-width="4"/>
+    <circle cx="352" cy="355" r="10" fill="#2a1710"/>
+    <circle cx="448" cy="355" r="10" fill="#2a1710"/>
+    <circle cx="355" cy="351" r="3.5" fill="#ffffff"/>
+    <circle cx="451" cy="351" r="3.5" fill="#ffffff"/>
+    <!-- smile creases under eyes -->
+    <path d="M330,372 Q352,382 374,372" fill="none" stroke="#4a2a1a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M470,372 Q448,382 426,372" fill="none" stroke="#4a2a1a" stroke-width="3" stroke-linecap="round"/>
+    
+    
+
+    <!-- Shades -->
+    <defs>
+      <linearGradient id="av-lens" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#1a1430"/>
+        <stop offset="0.55" stop-color="#0b0912"/>
+        <stop offset="1" stop-color="#2a0f22"/>
+      </linearGradient>
+    </defs>
+    <path d="M286,340 L310,338 M514,340 L490,338" stroke="#111" stroke-width="7" stroke-linecap="round"/>
+    <path d="M308,334 H390 Q394,334 393,340 L388,374 Q386,392 368,392 H330 Q312,392 309,374 L304,342 Q303,334 308,334 Z"
+          fill="url(#av-lens)" stroke="#0d0d12" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M492,334 H410 Q406,334 407,340 L412,374 Q414,392 432,392 H470 Q488,392 491,374 L496,342 Q497,334 492,334 Z"
+          fill="url(#av-lens)" stroke="#0d0d12" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M390,342 Q400,334 410,342" fill="none" stroke="#0d0d12" stroke-width="7" stroke-linecap="round"/>
+    <!-- neon top rim -->
+    <path d="M308,336 H390" stroke="url(#av-neon)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M410,336 H492" stroke="url(#av-neon)" stroke-width="3" stroke-linecap="round"/>
+    <!-- lens reflections -->
+    <path d="M318,346 L336,346 L322,380 L314,380 Z" fill="#a855f7" opacity="0.35"/>
+    <path d="M340,346 L346,346 L332,380 L328,380 Z" fill="#3b82f6" opacity="0.35"/>
+    <path d="M420,346 L438,346 L424,380 L416,380 Z" fill="#f43f6e" opacity="0.35"/>
+    <path d="M442,346 L448,346 L434,380 L430,380 Z" fill="#a855f7" opacity="0.35"/>
+    <!-- Nose -->
+    <path d="M392,360 L388,420" fill="none" stroke="#4a2a1a" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <path d="M368,428 Q362,446 382,450 Q400,458 418,450 Q438,446 432,428" fill="none" stroke="#2b1a12" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="384" cy="444" rx="7" ry="4" fill="#3d2216"/>
+    <ellipse cx="416" cy="444" rx="7" ry="4" fill="#3d2216"/>
+
+    <!-- Smile lines -->
+    <path d="M345,440 Q328,470 345,500" fill="none" stroke="#4a2a1a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M455,440 Q472,470 455,500" fill="none" stroke="#4a2a1a" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Mouth: open smile -->
+    <path d="M350,478 Q400,470 450,478 Q440,530 400,532 Q360,530 350,478 Z" fill="#5a1f1c" stroke="#2b1a12" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M356,481 Q400,474 444,481 L440,496 Q400,502 360,496 Z" fill="#fffaf0"/>
+    <path d="M372,518 Q400,532 428,518 Q400,512 372,518 Z" fill="#b8524a"/>
+    <path d="M350,478 Q400,470 450,478" fill="none" stroke="#2b1a12" stroke-width="5" stroke-linecap="round"/>
+    <!-- lower lip hint -->
+    <path d="M378,542 Q400,550 422,542" fill="none" stroke="#5a3322" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+</svg></span><span>Ask a Specialist<small>Chris's digital twin</small></span></button>
 <aside class="panel" id="twin" role="dialog" aria-label="Ask a Specialist">
-  <div class="phead"><span class="dot" aria-hidden="true">✦</span><div><b>Chris's Digital Twin</b><small>● Online</small></div><button class="close" aria-label="Close">✕</button></div>
+  <div class="phead"><span class="dot av" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="215 125 370 370">
+  <defs>
+    <clipPath id="hav-frame"><circle cx="400" cy="400" r="380"/></clipPath>
+    <radialGradient id="hav-glowPurple" cx="0.12" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="#5b2a7a" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#5b2a7a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hav-glowRed" cx="0.85" cy="0.2" r="0.55">
+      <stop offset="0" stop-color="#7a1f3a" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#7a1f3a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hav-glowBlue" cx="0.6" cy="1" r="0.55">
+      <stop offset="0" stop-color="#23467a" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#23467a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hav-vignette" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.55"/>
+    </radialGradient>
+    <linearGradient id="hav-neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="0.5" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#f43f6e"/>
+    </linearGradient>
+    <filter id="hav-soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <pattern id="hav-shadeDots" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2" fill="#3d2216" opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="#0b0a10"/>
+  <g>
+    <rect width="800" height="800" fill="#100d16"/>
+    <rect width="800" height="800" fill="url(#hav-glowPurple)"/>
+    <rect width="800" height="800" fill="url(#hav-glowRed)"/>
+    <rect width="800" height="800" fill="url(#hav-glowBlue)"/>
+    <!-- faint circuit traces -->
+    <g fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2">
+      <path d="M60,250 H200 L230,280 V340"/>
+      <path d="M90,470 H210 L240,440"/>
+      <path d="M740,230 H610 L580,260 V320"/>
+      <path d="M720,500 H600 L570,470"/>
+      <path d="M150,140 V200 H220"/>
+      <path d="M650,130 V190 H580"/>
+      <path d="M120,580 H190"/>
+      <path d="M690,600 H620"/>
+    </g>
+    <g fill="#ffffff" fill-opacity="0.18">
+      <circle cx="230" cy="340" r="4"/><circle cx="240" cy="440" r="4"/>
+      <circle cx="580" cy="320" r="4"/><circle cx="570" cy="470" r="4"/>
+      <circle cx="220" cy="200" r="4"/><circle cx="580" cy="190" r="4"/>
+    </g>
+    <rect width="800" height="800" fill="url(#hav-vignette)"/>
+
+    <!-- Shoulders / white shirt -->
+    <path d="M150,830 L150,800 C160,660 250,600 330,585 L470,585 C550,600 640,660 650,800 L650,830 Z" fill="#fbf8f1" stroke="#2b1a12" stroke-width="6"/>
+    <!-- shirt shading -->
+    <path d="M150,800 C158,700 200,650 250,620 C230,690 225,750 230,800 Z" fill="#e3dccd"/>
+    <path d="M650,800 C642,700 600,650 550,620 C570,690 575,750 570,800 Z" fill="#e3dccd"/>
+
+    <path d="M156,800 C166,668 252,608 330,592" fill="none" stroke="#3b82f6" stroke-width="5" opacity="0.8" stroke-linecap="round"/>
+    <path d="M644,800 C634,668 548,608 470,592" fill="none" stroke="#f43f6e" stroke-width="5" opacity="0.8" stroke-linecap="round"/>
+    <!-- Neck -->
+    <path d="M345,500 L345,600 Q400,640 455,600 L455,500 Z" fill="#6e4129" stroke="#2b1a12" stroke-width="6"/>
+    <path d="M345,540 Q400,590 455,540 L455,575 Q400,615 345,575 Z" fill="#53301e"/>
+
+    <!-- Collar -->
+    <path d="M335,575 L400,650 L360,690 L310,600 Z" fill="#ffffff" stroke="#2b1a12" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M465,575 L400,650 L440,690 L490,600 Z" fill="#ffffff" stroke="#2b1a12" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M400,650 L388,720 L400,800" fill="none" stroke="#2b1a12" stroke-width="4"/>
+    
+    <circle cx="398" cy="770" r="6" fill="#d9d2c3" stroke="#2b1a12" stroke-width="3"/>
+
+    <!-- Ears -->
+    <ellipse cx="268" cy="385" rx="26" ry="42" fill="#7a4a30" stroke="#2b1a12" stroke-width="6"/>
+    <ellipse cx="532" cy="385" rx="26" ry="42" fill="#7a4a30" stroke="#2b1a12" stroke-width="6"/>
+    <path d="M272,370 Q260,385 272,402" fill="none" stroke="#4a2a1a" stroke-width="4"/>
+    <path d="M528,370 Q540,385 528,402" fill="none" stroke="#4a2a1a" stroke-width="4"/>
+
+    <!-- Head (clean-shaven, defined jaw) -->
+    <path d="M280,300 C280,200 330,160 400,160 C470,160 520,200 520,300 L520,400 C520,470 480,540 400,555 C320,540 280,470 280,400 Z"
+          fill="#7a4a30" stroke="#2b1a12" stroke-width="6"/>
+    <!-- face shading (halftone) -->
+    <path d="M280,330 C285,450 320,530 400,555 C340,520 310,450 305,330 Z" fill="url(#hav-shadeDots)"/>
+    <path d="M520,330 C515,450 480,530 400,555 C460,520 490,450 495,330 Z" fill="url(#hav-shadeDots)"/>
+    <!-- neon rim light -->
+    <path d="M284,300 C282,220 330,166 400,164" fill="none" stroke="#3b82f6" stroke-width="5" opacity="0.85" stroke-linecap="round"/>
+    <path d="M284,320 L284,400 C284,465 318,530 392,551" fill="none" stroke="#6d7cf7" stroke-width="5" opacity="0.8" stroke-linecap="round"/>
+    <path d="M516,300 C518,220 470,166 400,164" fill="none" stroke="#c34cf0" stroke-width="5" opacity="0.85" stroke-linecap="round"/>
+    <path d="M516,320 L516,400 C516,465 482,530 408,551" fill="none" stroke="#f43f6e" stroke-width="5" opacity="0.8" stroke-linecap="round"/>
+    <!-- cheek highlights -->
+    <ellipse cx="335" cy="420" rx="22" ry="12" fill="#9a6444" opacity="0.7"/>
+    <ellipse cx="465" cy="420" rx="22" ry="12" fill="#9a6444" opacity="0.7"/>
+    <ellipse cx="400" cy="225" rx="50" ry="14" fill="#94603f" opacity="0.6"/>
+
+    <!-- Hair: close crop, greying -->
+    <path d="M278,310 C272,210 320,150 400,148 C480,150 528,210 522,310 C515,265 500,235 480,222 C440,205 360,205 320,222 C300,235 285,265 278,310 Z"
+          fill="#211c1a" stroke="#120c0a" stroke-width="6" stroke-linejoin="round"/>
+    <!-- grey temples -->
+    <path d="M280,300 C278,265 288,240 305,228 L300,300 Z" fill="#2a2523"/>
+    <path d="M520,300 C522,265 512,240 495,228 L500,300 Z" fill="#2a2523"/>
+
+    <g fill="#4a4340" opacity="0.9">
+      <circle cx="350" cy="180" r="3"/><circle cx="380" cy="170" r="3"/><circle cx="420" cy="172" r="3"/>
+      <circle cx="455" cy="182" r="3"/><circle cx="330" cy="200" r="3"/><circle cx="470" cy="200" r="3"/>
+      <circle cx="400" cy="188" r="3"/><circle cx="365" cy="195" r="3"/><circle cx="440" cy="196" r="3"/>
+    </g>
+
+    <!-- Eyebrows -->
+    <path d="M318,318 Q345,298 380,312 L378,324 Q348,314 320,330 Z" fill="#1e1612" stroke="#1e1612" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M482,318 Q455,298 420,312 L422,324 Q452,314 480,330 Z" fill="#1e1612" stroke="#1e1612" stroke-width="3" stroke-linejoin="round"/>
+
+    <!-- Eyes (smiling, slightly squinted) -->
+    <path d="M325,358 Q350,338 378,356 Q352,372 325,358 Z" fill="#fbf3e6" stroke="#2b1a12" stroke-width="4"/>
+    <path d="M475,358 Q450,338 422,356 Q448,372 475,358 Z" fill="#fbf3e6" stroke="#2b1a12" stroke-width="4"/>
+    <circle cx="352" cy="355" r="10" fill="#2a1710"/>
+    <circle cx="448" cy="355" r="10" fill="#2a1710"/>
+    <circle cx="355" cy="351" r="3.5" fill="#ffffff"/>
+    <circle cx="451" cy="351" r="3.5" fill="#ffffff"/>
+    <!-- smile creases under eyes -->
+    <path d="M330,372 Q352,382 374,372" fill="none" stroke="#4a2a1a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M470,372 Q448,382 426,372" fill="none" stroke="#4a2a1a" stroke-width="3" stroke-linecap="round"/>
+    
+    
+
+    <!-- Shades -->
+    <defs>
+      <linearGradient id="hav-lens" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#1a1430"/>
+        <stop offset="0.55" stop-color="#0b0912"/>
+        <stop offset="1" stop-color="#2a0f22"/>
+      </linearGradient>
+    </defs>
+    <path d="M286,340 L310,338 M514,340 L490,338" stroke="#111" stroke-width="7" stroke-linecap="round"/>
+    <path d="M308,334 H390 Q394,334 393,340 L388,374 Q386,392 368,392 H330 Q312,392 309,374 L304,342 Q303,334 308,334 Z"
+          fill="url(#hav-lens)" stroke="#0d0d12" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M492,334 H410 Q406,334 407,340 L412,374 Q414,392 432,392 H470 Q488,392 491,374 L496,342 Q497,334 492,334 Z"
+          fill="url(#hav-lens)" stroke="#0d0d12" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M390,342 Q400,334 410,342" fill="none" stroke="#0d0d12" stroke-width="7" stroke-linecap="round"/>
+    <!-- neon top rim -->
+    <path d="M308,336 H390" stroke="url(#hav-neon)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M410,336 H492" stroke="url(#hav-neon)" stroke-width="3" stroke-linecap="round"/>
+    <!-- lens reflections -->
+    <path d="M318,346 L336,346 L322,380 L314,380 Z" fill="#a855f7" opacity="0.35"/>
+    <path d="M340,346 L346,346 L332,380 L328,380 Z" fill="#3b82f6" opacity="0.35"/>
+    <path d="M420,346 L438,346 L424,380 L416,380 Z" fill="#f43f6e" opacity="0.35"/>
+    <path d="M442,346 L448,346 L434,380 L430,380 Z" fill="#a855f7" opacity="0.35"/>
+    <!-- Nose -->
+    <path d="M392,360 L388,420" fill="none" stroke="#4a2a1a" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <path d="M368,428 Q362,446 382,450 Q400,458 418,450 Q438,446 432,428" fill="none" stroke="#2b1a12" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="384" cy="444" rx="7" ry="4" fill="#3d2216"/>
+    <ellipse cx="416" cy="444" rx="7" ry="4" fill="#3d2216"/>
+
+    <!-- Smile lines -->
+    <path d="M345,440 Q328,470 345,500" fill="none" stroke="#4a2a1a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M455,440 Q472,470 455,500" fill="none" stroke="#4a2a1a" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Mouth: open smile -->
+    <path d="M350,478 Q400,470 450,478 Q440,530 400,532 Q360,530 350,478 Z" fill="#5a1f1c" stroke="#2b1a12" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M356,481 Q400,474 444,481 L440,496 Q400,502 360,496 Z" fill="#fffaf0"/>
+    <path d="M372,518 Q400,532 428,518 Q400,512 372,518 Z" fill="#b8524a"/>
+    <path d="M350,478 Q400,470 450,478" fill="none" stroke="#2b1a12" stroke-width="5" stroke-linecap="round"/>
+    <!-- lower lip hint -->
+    <path d="M378,542 Q400,550 422,542" fill="none" stroke="#5a3322" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+</svg></span><div><b>Chris's Digital Twin</b><small>● Online · answers from this page only</small></div><button class="close" aria-label="Close">✕</button></div>
   <div class="msgs" id="msgs" aria-live="polite"></div>
   <div class="chips" id="chips"></div>
   <form class="pform" id="pform"><input id="q" placeholder="Ask about Chris's experience…" autocomplete="off" aria-label="Your question"><button aria-label="Send">↑</button></form>
@@ -727,40 +1071,133 @@ document.getElementById('contactForm').addEventListener('submit',e=>{
   location.href='mailto:growth.geek.chris@gmail.com?subject='+encodeURIComponent(`${f.get('topic')}: ${f.get('first')} ${f.get('last')}`)+'&body='+encodeURIComponent(body);
 });
 
-/* Digital twin: grounded answers from page content only */
-const KB=[
-  {k:['who','about','summary','introduce','overview','background','tell'],
-   a:"Chris is a conversational AI and digital transformation leader, currently Head of Conversational AI at Virgin Media O2. He's spent ten years in conversational experiences, from early web chat bots to generative and agentic AI."},
-  {k:['result','results','achievement','achievements','impact','value','revenue','biggest','delivered','52m','roi'],
-   a:"At Virgin Media O2, Chris's conversational AI work has delivered £52m+ in value, with 45%+ bot containment and £16m+ annual OPEX avoidance across conversational commerce."},
-  {k:['budget','budgets','money','opex','capex','commercial','contract','contracts','spend','cost','savings'],
-   a:"Chris manages multi-million-pound budgets and commercial contracts at Virgin Media O2, achieving £16m+ annual OPEX avoidance. At Sitel Group UK he owned both OPEX and CAPEX budgets."},
-  {k:['team','teams','size','people','manage','managed','leadership','lead','led','reports','fte','staff'],
-   a:"At Sitel Group UK, Chris drove OKRs across a team of 300+ FTE with 8 direct reports. At Virgin Media O2 he leads conversational AI strategy across design, build and digital adoption."},
-  {k:['vmo2','virgin','o2','current','now','role','head','job','title'],
-   a:"Chris has been Head of Conversational AI at Virgin Media O2 since 2021, after five years as Senior Product Manager for Chatbots & Web Messaging at Virgin Media (2016–2021). His channels handle 18 million+ interactions a year."},
-  {k:['ai','genai','generative','agentic','llm','nlp','nlu','chatbot','chatbots','bot','bots','messaging','webchat','chat','conversational'],
-   a:"Chris works across conversational, generative and agentic AI, plus NLP, NLU, web chat and messaging. At Virgin Media O2 these handle 18 million+ annual interactions with 45%+ containment."},
-  {k:['sitel','operations','bpo','csat','nps','customer','satisfaction'],
-   a:"At Sitel Group UK (2015–2016), Chris was Senior Operations Manager. He oversaw onshore and offshore BPOs across digital platforms, maintaining 85%+ CSAT and +30 NPS."},
-  {k:['cci','south','africa','sales','acquisition','cpa','conversion'],
-   a:"As Head of New Acquisition Sales at CCI South Africa (2014–2015), Chris managed international offshore telco partnerships and kept cost per acquisition below £3.45."},
-  {k:['award','awards','recognition','won','winning','innovation','digiday'],
-   a:"Chris won the Innovation Leader Award in 2024 and a Digiday Tech Award in 2023."},
-  {k:['education','study','studied','degree','university','qualification','qualifications','course','birmingham','squared'],
-   a:"Chris studied Business Management at the University of Birmingham and Digital & Programmatic Marketing with Google Squared Online."},
-  {k:['tech','stack','tools','skills','aws','gemini','sierra','claude','anthropic','tableau','analytics','ga4','notebooklm','studio','cloud','google'],
-   a:"Chris's tech stack includes Sierra AI, Claude, Gemini, Google AI Studio and Google Analytics (GA4) at expert level, and NotebookLM, AWS and Tableau at advanced level."},
-  {k:['contact','email','phone','call','reach','hire','available','availability','opportunities','location','where','based','start'],
-   a:"Chris is based in the United Kingdom and available from Q1 2027. Email <a href='mailto:growth.geek.chris@gmail.com'>growth.geek.chris@gmail.com</a> or use the <a href='#checkout' data-close>contact form</a>."}
-];
-const STOP=new Set("what whats is are the a an of to in and or for on with his has have did does do he chris chris's can you me tell how many much".split(' '));
-function answer(q){
-  const words=q.toLowerCase().replace(/[^a-z0-9£'\s]/g,' ').split(/\s+/).filter(w=>w&&!STOP.has(w));
-  const sc=KB.map(e=>({e,s:words.reduce((n,w)=>n+(e.k.some(k=>w===k||(w.length>3&&k.startsWith(w))||(k.length>3&&w.startsWith(k)))?1:0),0)})).filter(x=>x.s>0).sort((a,b)=>b.s-a.s);
-  if(!sc.length) return "That isn't covered on this page, so I won't guess. Ask Chris directly at <a href='mailto:growth.geek.chris@gmail.com'>growth.geek.chris@gmail.com</a>.";
-  return sc.filter(x=>x.s===sc[0].s).slice(0,2).map(x=>x.e.a).join('<br><br>');
+/* Digital twin: reads this page's own content every time it answers.
+   Edit the page and the twin's knowledge updates automatically. It never writes facts of its own:
+   every answer is quoted from a section of the page, with that section named as the source. */
+const T=el=>{if(!el)return '';const c=el.cloneNode(true);c.querySelectorAll('br').forEach(b=>b.replaceWith(' '));return c.textContent.replace(/\s+/g,' ').trim();};
+const END=s=>!s||/[.!?]$/.test(s)?s:s+'.';
+const $1=(s,r=document)=>r.querySelector(s), $all=(s,r=document)=>[...r.querySelectorAll(s)];
+
+function corpus(){
+  const U=[];
+  const add=(text,src)=>{text=(text||'').replace(/[●•]/g,'').replace(/\s+/g,' ').trim();if(text.length>3&&!U.some(u=>u.text===text))U.push({text,src});};
+  add(`${T($1('.hero h1'))} ${END(T($1('.hero .sub')))}`,'Overview');
+  add(T($1('.mission .big')),'Overview');
+  $all('.feature .tile.black').forEach(t=>add(`${END(T($1('h2',t)))} ${T($1('.sub',t))}`,'Overview'));
+  const promo=$1('.promo'); if(promo){const c=promo.cloneNode(true);c.querySelectorAll('a').forEach(a=>a.remove());add(c.textContent,'Availability');}
+  $all('.hl').forEach(h=>add(`${T($1('.eyebrow',h))}: ${END(T($1('h3',h)))} ${T($1('p:not(.eyebrow)',h))}`,'Highlights'));
+  $all('.ci').forEach(c=>add(`${T($1('b',c))}: ${T($1('span',c))}`,"What's in the box"));
+  $all('.gen').forEach(g=>{
+    const co=T($1('.eyebrow',g)), ti=T($1('h3',g)).replace(/\.$/,''), yr=T($1('.yrs',g));
+    add(`${ti} at ${co}${yr?` (${yr})`:''}. ${END(T($1('.l',g)))} Headline result: ${END(T($1('.price',g)))}`,'Experience');
+    $all('li',g).forEach(li=>add(`At ${co} (${ti}): ${END(T(li))}`,'Experience'));
+    add(T($1('.prev',g)),'Experience');
+  });
+  $all('.srow').forEach(r=>{
+    const vals=$all('.v > div',r).map(d=>{const v=T($1('span',d));return `${T($1('b',d))}${/^[A-Z][a-z]/.test(v)?', ':' '}${v}`;});
+    const tags=$all('.compat span',r).map(s=>{const em=$1('em',s);const n=[...s.childNodes].filter(x=>x.nodeType===3).map(x=>x.textContent).join('').trim();return em?`${n} (${T(em)})`:n;});
+    add(`${T($1('h3',r))}: ${[...vals,...tags].join(', ')}.`,'Tech Specs');
+  });
+  $all('.award').forEach(a=>add(`Award: ${T($1('h3',a))} (${T($1('p',a))}).`,'Awards'));
+  $all('.edu .card').forEach(c=>add(`${T($1('.eyebrow',c))}: ${T($1('h3',c))}, ${T($1('p:not(.eyebrow)',c))}.`,'Education'));
+  const sum=$1('.summary');
+  if(sum){
+    $all('dl > div',sum).forEach(d=>add(`${T($1('dt',d))}: ${END(T($1('dd',d)))}`,'Contact'));
+    add(`${T($1('.total span',sum))}: ${END(T($1('.total b',sum)))}`,'Contact');
+  }
+  add(T($1('#checkout .formcard > p')),'Contact');
+  return U;
 }
+
+/* Words that carry no meaning in a question */
+const STOP=new Set(`a an the and or of to in on for with at by from as is are was were be been being it its this that these those what whats which who whom whose how many much does did do done has have had he him his himself chris christopher huggins simon can could would will should you your me my i we our tell about please any some there their they them get got give show know let lets than then also just very more most like where when time spent use used using uses work worked working biggest best main key top largest greatest major big good great`.split(/\s+/));
+const stem=w=>{
+  if(w.length>5&&w.endsWith('ing'))return w.slice(0,-3);
+  if(w.length>4&&w.endsWith('ied'))return w.slice(0,-3)+'y';
+  if(w.length>4&&w.endsWith('ed'))return w.slice(0,-2);
+  if(w.length>4&&w.endsWith('ies'))return w.slice(0,-3)+'y';
+  if(w.length>3&&w.endsWith('s')&&!w.endsWith('ss'))return w.slice(0,-1);
+  return w;
+};
+function tok(s,keep){
+  const out=[];
+  s.toLowerCase().replace(/[£+%,]/g,'').replace(/[‘’]/g,"'").split(/[^a-z0-9.']+/).forEach(raw=>{
+    let w=raw.replace(/^[.']+|[.']+$/g,'').replace(/'s$/,'');
+    if(!w||STOP.has(w))return; const st=stem(w); if(STOP.has(st))return;
+    out.push(st); if(keep)keep.set(st,w);
+  });
+  return out;
+}
+
+/* Generic question vocabulary only: maps how people ask to how pages are usually worded.
+   No facts live here, so editing the page never needs a change below. */
+const SYN={};
+Object.entries({
+  result:'value delivered impact headline avoidance containment',achievement:'value delivered headline award',impact:'value delivered impact',
+  revenue:'value revenue sales incremental',value:'value delivered',
+  budget:'budget opex capex commercial contract',money:'budget opex value',cost:'opex cost acquisition avoidance',saving:'opex avoidance',
+  team:'fte report team leadership okr',people:'fte team leadership',size:'fte report multi',manage:'led manage leadership fte report',lead:'led leadership fte',leadership:'leadership fte report',
+  available:'availability available',availability:'availability available',start:'availability available',notice:'availability',free:'availability',
+  hire:'availability email phone',contact:'email phone response',reach:'email phone',call:'phone',
+  location:'delivery region kingdom uk',based:'delivery region kingdom uk',live:'delivery region kingdom uk',
+  study:'education university',studied:'education university',degree:'education university',university:'education university',qualification:'education',educated:'education university',school:'education university',
+  award:'award winner',won:'award',win:'award',recognition:'award',
+  tool:'compatibility expert advanced',tech:'compatibility capabilities',technology:'compatibility capabilities',stack:'compatibility',software:'compatibility',platform:'compatibility',
+  skill:'capabilities compatibility strategy',expertise:'capabilities compatibility expert',
+  experience:'present head manager',role:'head manager present',job:'head manager present',career:'head manager present',history:'head manager present',
+  current:'present latest',currently:'present latest',now:'present latest',
+  customer:'csat nps customer',satisfaction:'csat nps',
+  overview:'leader enterprise transformation',summary:'leader enterprise transformation',background:'leader enterprise transformation',introduce:'leader enterprise transformation',
+  strength:'capabilities strategy'
+}).forEach(([k,v])=>SYN[stem(k)]=v.split(' ').map(stem));
+
+const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const linkify=s=>esc(s)
+  .replace(/([\w.+-]+@[\w-]+(?:\.[\w-]+)+)/g,"<a href='mailto:$1'>$1</a>")
+  .replace(/(\+\d[\d ]{8,}\d)/g,m=>`<a href='tel:${m.replace(/\s/g,'')}'>${m}</a>`);
+const pageEmail=()=>{const a=document.querySelector('a[href^="mailto:"]');return a?a.getAttribute('href').slice(7):'';};
+const askDirect=()=>{const e=pageEmail();return e?` Ask Chris directly at <a href='mailto:${esc(e)}'>${esc(e)}</a>.`:'';};
+const match=(a,b)=>a===b||(a.length>=4&&b.length>=4&&(a.startsWith(b)||b.startsWith(a)));
+
+function render(units,note){
+  const srcs=[...new Set(units.map(u=>u.src))];
+  let h=units.map(u=>`<p class="ans">${linkify(u.text)}</p>`).join('');
+  if(note)h+=`<p class="ans">${note}</p>`;
+  if(srcs.some(s=>s==='Contact'||s==='Availability'))h+=`<p class="ans"><a href='#checkout' data-close>Open the contact form</a></p>`;
+  return h+`<span class="src">From this page: ${esc(srcs.join(' · '))}</span>`;
+}
+
+function answer(q){
+  const U=corpus(), docs=U.map(u=>tok(u.text+' '+u.src)), N=docs.length;
+  const orig=new Map(), base=[...new Set(tok(q,orig))];
+  if(!base.length) return render(U.filter(u=>u.src==='Overview').slice(0,2));
+
+  const terms=new Map(); base.forEach(t=>terms.set(t,1));
+  base.forEach(t=>(SYN[t]||[]).forEach(s=>{if(!terms.has(s))terms.set(s,.6);}));
+  const df=new Map(); terms.forEach((_,t)=>df.set(t,docs.filter(d=>d.some(x=>match(x,t))).length));
+  const idf=t=>Math.log(1+N/Math.max(1,df.get(t)));
+
+  const scored=docs.map((d,i)=>{
+    let s=0,direct=0;
+    terms.forEach((w,t)=>{if(d.some(x=>match(x,t))){s+=w*idf(t);if(w===1)direct++;}});
+    return {u:U[i],s:s/(1+d.length/45),direct};
+  }).filter(x=>x.s>0).sort((a,b)=>b.s-a.s);
+
+  // Specific words (names, tools, topics) carry the question. If none of them is on the page, don't answer around it.
+  const specific=base.filter(t=>!SYN[t]);
+  const missingT=specific.filter(t=>!df.get(t)), missing=missingT.map(t=>orig.get(t)||t);
+  const noteMissing=missing.length?`The page doesn't mention ${esc(missing.map(m=>`“${m}”`).join(' or '))}`:'';
+  if(specific.length&&missingT.length===specific.length&&specific.length>=base.length-1&&missing.length){
+    return `${noteMissing}, so I won't guess.${askDirect()}`;
+  }
+  if(!scored.length||scored[0].s<0.6){
+    return `That isn't covered on this page, so I won't guess.${askDirect()}`;
+  }
+  const best=scored[0].s, picks=scored.filter(x=>x.s>=best*0.55).slice(0,3).map(x=>x.u);
+  const note=noteMissing?`${noteMissing}, so I can't speak to that.`:'';
+  return render(picks,note);
+}
+
 const panel=document.getElementById('twin'),msgs=document.getElementById('msgs'),qi=document.getElementById('q');
 function add(html,who){const d=document.createElement('div');d.className='m '+who;who==='me'?d.textContent=html:d.innerHTML=html;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;return d;}
 function ask(q){if(!q.trim())return;add(q,'me');const t=add('<span class="typing"><i></i><i></i><i></i></span>','bot');setTimeout(()=>{t.innerHTML=answer(q);msgs.scrollTop=msgs.scrollHeight;},650);}
