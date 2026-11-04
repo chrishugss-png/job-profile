@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<defs><linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2997ff"/><stop offset=".5" stop-color="#a855f7"/><stop offset="1" stop-color="#ff375f"/></linearGradient>
+<clipPath id="c"><circle cx="50" cy="50" r="45"/></clipPath></defs>
+<circle cx="50" cy="50" r="50" fill="url(#ring)"/>
+<g clip-path="url(#c)"><svg x="5" y="5" width="90" height="90" viewBox="215 125 370 370">
+  <defs>
+    <clipPath id="f-frame"><circle cx="400" cy="400" r="380"/></clipPath>
+    <radialGradient id="f-glowPurple" cx="0.12" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="#5b2a7a" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#5b2a7a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="f-glowRed" cx="0.85" cy="0.2" r="0.55">
+      <stop offset="0" stop-color="#7a1f3a" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#7a1f3a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="f-glowBlue" cx="0.6" cy="1" r="0.55">
+      <stop offset="0" stop-color="#23467a" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#23467a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="f-vignette" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.55"/>
+    </radialGradient>
+    <linearGradient id="f-neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="0.5" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#f43f6e"/>
+    </linearGradient>
+    <filter id="f-soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <pattern id="f-shadeDots" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2" fill="#3d2216" opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="#0b0a10"/>
+  <g>
+    <rect width="800" height="800" fill="#100d16"/>
+    <rect width="800" height="800" fill="url(#f-glowPurple)"/>
+    <rect width="800" height="800" fill="url(#f-glowRed)"/>
+    <rect width="800" height="800" fill="url(#f-glowBlue)"/>
+    <!-- faint circuit traces -->
+    <g fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2">
+      <path d="M60,250 H200 L230,280 V340"/>
+      <path d="M90,470 H210 L240,440"/>
+      <path d="M740,230 H610 L580,260 V320"/>
+      <path d="M720,500 H600 L570,470"/>
+      <path d="M150,140 V200 H220"/>
+      <path d="M650,130 V190 H580"/>
+      <path d="M120,580 H190"/>
+      <path d="M690,600 H620"/>
+    </g>
+    <g fill="#ffffff" fill-opacity="0.18">
+      <circle cx="230" cy="340" r="4"/><circle cx="240" cy="440" r="4"/>
+      <circle cx="580" cy="320" r="4"/><circle cx="570" cy="470" r="4"/>
+      <circle cx="220" cy="200" r="4"/><circle cx="580" cy="190" r="4"/>
+    </g>
+    <rect width="800" height="800" fill="url(#f-vignette)"/>
+
+    <!-- Shoulders / white shirt -->
+    <path d="M150,830 L150,800 C160,660 250,600 330,585 L470,585 C550,600 640,660 650,800 L650,830 Z" fill="#fbf8f1" stroke="#2b1a12" stroke-width="6"/>
+    <!-- shirt shading -->
+    <path d="M150,800 C158,700 200,650 250,620 C230,690 225,750 230,800 Z" fill="#e3dccd"/>
+    <path d="M650,800 C642,700 600,650 550,620 C570,690 575,750 570,800 Z" fill="#e3dccd"/>
+
+    <path d="M156,800 C166,668 252,608 330,592" fill="none" stroke="#3b82f6" stroke-width="5" opacity="0.8" stroke-linecap="round"/>
+    <path d="M644,800 C634,668 548,608 470,592" fill="none" stroke="#f43f6e" stroke-width="5" opacity="0.8" stroke-linecap="round"/>
+    <!-- Neck -->
+    <path d="M345,500 L345,600 Q400,640 455,600 L455,500 Z" fill="#6e4129" stroke="#2b1a12" stroke-width="6"/>
+    <path d="M345,540 Q400,590 455,540 L455,575 Q400,615 345,575 Z" fill="#53301e"/>
+
+    <!-- Collar -->
+    <path d="M335,575 L400,650 L360,690 L310,600 Z" fill="#ffffff" stroke="#2b1a12" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M465,575 L400,650 L440,690 L490,600 Z" fill="#ffffff" stroke="#2b1a12" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M400,650 L388,720 L400,800" fill="none" stroke="#2b1a12" stroke-width="4"/>
+    
+    <circle cx="398" cy="770" r="6" fill="#d9d2c3" stroke="#2b1a12" stroke-width="3"/>
+
+    <!-- Ears -->
+    <ellipse cx="268" cy="385" rx="26" ry="42" fill="#7a4a30" stroke="#2b1a12" stroke-width="6"/>
+    <ellipse cx="532" cy="385" rx="26" ry="42" fill="#7a4a30" stroke="#2b1a12" stroke-width="6"/>
+    <path d="M272,370 Q260,385 272,402" fill="none" stroke="#4a2a1a" stroke-width="4"/>
+    <path d="M528,370 Q540,385 528,402" fill="none" stroke="#4a2a1a" stroke-width="4"/>
+
+    <!-- Head (clean-shaven, defined jaw) -->
+    <path d="M280,300 C280,200 330,160 400,160 C470,160 520,200 520,300 L520,400 C520,470 480,540 400,555 C320,540 280,470 280,400 Z"
+          fill="#7a4a30" stroke="#2b1a12" stroke-width="6"/>
+    <!-- face shading (halftone) -->
+    <path d="M280,330 C285,450 320,530 400,555 C340,520 310,450 305,330 Z" fill="url(#f-shadeDots)"/>
+    <path d="M520,330 C515,450 480,530 400,555 C460,520 490,450 495,330 Z" fill="url(#f-shadeDots)"/>
+    <!-- neon rim light -->
+    <path d="M284,300 C282,220 330,166 400,164" fill="none" stroke="#3b82f6" stroke-width="5" opacity="0.85" stroke-linecap="round"/>
+    <path d="M284,320 L284,400 C284,465 318,530 392,551" fill="none" stroke="#6d7cf7" stroke-width="5" opacity="0.8" stroke-linecap="round"/>
+    <path d="M516,300 C518,220 470,166 400,164" fill="none" stroke="#c34cf0" stroke-width="5" opacity="0.85" stroke-linecap="round"/>
+    <path d="M516,320 L516,400 C516,465 482,530 408,551" fill="none" stroke="#f43f6e" stroke-width="5" opacity="0.8" stroke-linecap="round"/>
+    <!-- cheek highlights -->
+    <ellipse cx="335" cy="420" rx="22" ry="12" fill="#9a6444" opacity="0.7"/>
+    <ellipse cx="465" cy="420" rx="22" ry="12" fill="#9a6444" opacity="0.7"/>
+    <ellipse cx="400" cy="225" rx="50" ry="14" fill="#94603f" opacity="0.6"/>
+
+    <!-- Hair: close crop, greying -->
+    <path d="M278,310 C272,210 320,150 400,148 C480,150 528,210 522,310 C515,265 500,235 480,222 C440,205 360,205 320,222 C300,235 285,265 278,310 Z"
+          fill="#211c1a" stroke="#120c0a" stroke-width="6" stroke-linejoin="round"/>
+    <!-- grey temples -->
+    <path d="M280,300 C278,265 288,240 305,228 L300,300 Z" fill="#2a2523"/>
+    <path d="M520,300 C522,265 512,240 495,228 L500,300 Z" fill="#2a2523"/>
+
+    <g fill="#4a4340" opacity="0.9">
+      <circle cx="350" cy="180" r="3"/><circle cx="380" cy="170" r="3"/><circle cx="420" cy="172" r="3"/>
+      <circle cx="455" cy="182" r="3"/><circle cx="330" cy="200" r="3"/><circle cx="470" cy="200" r="3"/>
+      <circle cx="400" cy="188" r="3"/><circle cx="365" cy="195" r="3"/><circle cx="440" cy="196" r="3"/>
+    </g>
+
+    <!-- Eyebrows -->
+    <path d="M318,318 Q345,298 380,312 L378,324 Q348,314 320,330 Z" fill="#1e1612" stroke="#1e1612" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M482,318 Q455,298 420,312 L422,324 Q452,314 480,330 Z" fill="#1e1612" stroke="#1e1612" stroke-width="3" stroke-linejoin="round"/>
+
+    <!-- Eyes (smiling, slightly squinted) -->
+    <path d="M325,358 Q350,338 378,356 Q352,372 325,358 Z" fill="#fbf3e6" stroke="#2b1a12" stroke-width="4"/>
+    <path d="M475,358 Q450,338 422,356 Q448,372 475,358 Z" fill="#fbf3e6" stroke="#2b1a12" stroke-width="4"/>
+    <circle cx="352" cy="355" r="10" fill="#2a1710"/>
+    <circle cx="448" cy="355" r="10" fill="#2a1710"/>
+    <circle cx="355" cy="351" r="3.5" fill="#ffffff"/>
+    <circle cx="451" cy="351" r="3.5" fill="#ffffff"/>
+    <!-- smile creases under eyes -->
+    <path d="M330,372 Q352,382 374,372" fill="none" stroke="#4a2a1a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M470,372 Q448,382 426,372" fill="none" stroke="#4a2a1a" stroke-width="3" stroke-linecap="round"/>
+    
+    
+
+    <!-- Shades -->
+    <defs>
+      <linearGradient id="f-lens" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#1a1430"/>
+        <stop offset="0.55" stop-color="#0b0912"/>
+        <stop offset="1" stop-color="#2a0f22"/>
+      </linearGradient>
+    </defs>
+    <path d="M286,340 L310,338 M514,340 L490,338" stroke="#111" stroke-width="7" stroke-linecap="round"/>
+    <path d="M308,334 H390 Q394,334 393,340 L388,374 Q386,392 368,392 H330 Q312,392 309,374 L304,342 Q303,334 308,334 Z"
+          fill="url(#f-lens)" stroke="#0d0d12" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M492,334 H410 Q406,334 407,340 L412,374 Q414,392 432,392 H470 Q488,392 491,374 L496,342 Q497,334 492,334 Z"
+          fill="url(#f-lens)" stroke="#0d0d12" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M390,342 Q400,334 410,342" fill="none" stroke="#0d0d12" stroke-width="7" stroke-linecap="round"/>
+    <!-- neon top rim -->
+    <path d="M308,336 H390" stroke="url(#f-neon)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M410,336 H492" stroke="url(#f-neon)" stroke-width="3" stroke-linecap="round"/>
+    <!-- lens reflections -->
+    <path d="M318,346 L336,346 L322,380 L314,380 Z" fill="#a855f7" opacity="0.35"/>
+    <path d="M340,346 L346,346 L332,380 L328,380 Z" fill="#3b82f6" opacity="0.35"/>
+    <path d="M420,346 L438,346 L424,380 L416,380 Z" fill="#f43f6e" opacity="0.35"/>
+    <path d="M442,346 L448,346 L434,380 L430,380 Z" fill="#a855f7" opacity="0.35"/>
+    <!-- Nose -->
+    <path d="M392,360 L388,420" fill="none" stroke="#4a2a1a" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <path d="M368,428 Q362,446 382,450 Q400,458 418,450 Q438,446 432,428" fill="none" stroke="#2b1a12" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="384" cy="444" rx="7" ry="4" fill="#3d2216"/>
+    <ellipse cx="416" cy="444" rx="7" ry="4" fill="#3d2216"/>
+
+    <!-- Smile lines -->
+    <path d="M345,440 Q328,470 345,500" fill="none" stroke="#4a2a1a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M455,440 Q472,470 455,500" fill="none" stroke="#4a2a1a" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Mouth: open smile -->
+    <path d="M350,478 Q400,470 450,478 Q440,530 400,532 Q360,530 350,478 Z" fill="#5a1f1c" stroke="#2b1a12" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M356,481 Q400,474 444,481 L440,496 Q400,502 360,496 Z" fill="#fffaf0"/>
+    <path d="M372,518 Q400,532 428,518 Q400,512 372,518 Z" fill="#b8524a"/>
+    <path d="M350,478 Q400,470 450,478" fill="none" stroke="#2b1a12" stroke-width="5" stroke-linecap="round"/>
+    <!-- lower lip hint -->
+    <path d="M378,542 Q400,550 422,542" fill="none" stroke="#5a3322" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+</svg></g>
+</svg>
