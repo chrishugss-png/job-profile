@@ -59,7 +59,7 @@
   ],
   "award": [
    "Innovation Leader Award (2024)",
-   "Digiday Tech Award (2023)"
+   "Digiday Technology Awards 2023: Best E-Commerce Technology (Virgin Media with LivePerson)"
   ],
   "knowsAbout": [
    "Conversational AI",
@@ -81,6 +81,52 @@
   },
   "sameAs": [
    "https://www.linkedin.com/in/chris-huggins-s2/"
+  ],
+  "subjectOf": [
+   {
+    "@type": "BlogPosting",
+    "headline": "Meeting customers where they are: How Conversational AI became Virgin Media's digital customer engagement strategy",
+    "url": "https://www.liveperson.com/blog/vm-digital-customer-engagement-strategy/",
+    "datePublished": "2022-12-21",
+    "author": {
+     "@id": "https://chrishuggins.com/#person"
+    },
+    "publisher": {
+     "@type": "Organization",
+     "name": "LivePerson"
+    }
+   },
+   {
+    "@type": "BlogPosting",
+    "headline": "AI transformation at Virgin Media: Meeting customer needs with AI tools",
+    "url": "https://www.liveperson.com/blog/ai-transformation-at-virgin-media/",
+    "datePublished": "2023-10-26",
+    "publisher": {
+     "@type": "Organization",
+     "name": "LivePerson"
+    },
+    "about": {
+     "@id": "https://chrishuggins.com/#person"
+    }
+   },
+   {
+    "@type": "VideoObject",
+    "name": "Keynote Speaker - Christopher Huggins at Conversational AI & Experience Summit (2nd Edition)",
+    "url": "https://www.youtube.com/watch?v=AOwVwjGGEe8",
+    "about": {
+     "@id": "https://chrishuggins.com/#person"
+    }
+   },
+   {
+    "@type": "NewsArticle",
+    "headline": "LivePerson, Virgin Media, Papercup and Seismic are 2023 Digiday Technology Awards winners",
+    "url": "https://digiday.com/media/liveperson-virgin-media-papercup-and-seismic-are-2023-digiday-technology-awards-winners/",
+    "datePublished": "2023-08-29",
+    "publisher": {
+     "@type": "Organization",
+     "name": "Digiday"
+    }
+   }
   ]
  }
 }
@@ -322,9 +368,23 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .toast.show{transform:none;opacity:1}
 .toast svg{width:36px;height:36px}
 
+
+/* Featured & Speaking */
+.feats{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:56px}
+.feat{display:flex;flex-direction:column;background:#1d1d1f;border-radius:var(--radius);padding:34px 32px 30px;color:#f5f5f7;transition:transform .25s ease,background .25s ease}
+.feat:hover{transform:translateY(-4px);background:#232326}
+.feat:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+.fi{width:52px;height:52px;border-radius:50%;background:var(--grad);display:grid;place-items:center;margin-bottom:22px}
+.fi svg{width:24px;height:24px}
+.ftype{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#86868b}
+.feat h3{font-size:22px;line-height:1.25;margin-top:10px;letter-spacing:-.015em}
+.fsrc{font-size:14px;color:#a1a1a6;margin-top:10px}
+.feat .more{margin-top:auto;padding-top:20px;font-size:16px}
+.fnote{text-align:center;color:#a1a1a6;font-size:15px;margin-top:36px}
+.fnote a{color:var(--link)}
 @media (max-width:860px){
   .links{display:none}
-  .feature,.box,.gens,.awards,.edu,.checkout{grid-template-columns:1fr}
+  .feature,.box,.gens,.awards,.edu,.checkout,.feats{grid-template-columns:1fr}
   .srow{grid-template-columns:1fr;gap:14px}
   .summary{position:static}
   .award{padding:36px 26px}
@@ -351,10 +411,11 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <a href="#lineup">Experience</a>
       <a href="#specs">Tech Specs</a>
       <a href="#awards">Awards</a>
+      <a href="#featured">Featured</a>
       <a href="#checkout">Contact</a>
     </div>
     <div class="navr">
-      <a class="navbuy" href="#checkout" data-add>Hire</a>
+      <a class="navbuy" href="#checkout" data-add>Contact</a>
       <a class="bag" href="#checkout" aria-label="Your team"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><b>1</b></a>
     </div>
   </div>
@@ -369,7 +430,7 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <h1 class="h-xxl rv">Christopher<br>Simon Huggins.</h1>
       <p class="sub rv">Conversational AI and digital transformation leader.<br><span class="grad" style="font-weight:600">Engineered for enterprise AI.</span></p>
       <div class="ctas rv">
-        <a class="btn" href="#checkout" data-add>Hire Chris</a>
+        <a class="btn" href="#checkout" data-add>Contact Us</a>
         <a class="btn ghost" href="#highlights">Learn more</a>
       </div>
 
@@ -437,6 +498,21 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
             <rect x="102" y="110" width="34" height="100" rx="8" opacity=".65"/><rect x="148" y="78" width="34" height="132" rx="8" opacity=".8"/>
             <rect x="194" y="40" width="34" height="170" rx="8"/><rect x="240" y="12" width="34" height="198" rx="8" fill="#ff375f"/>
           </g>
+        </svg>
+      </article>
+
+      <article class="hl">
+        <p class="eyebrow">Conversion</p>
+        <h3 class="grad">Up to 42%</h3>
+        <p>Digital sales conversion, with 29% lower cost per acquisition. As published by LivePerson.</p>
+        <svg viewBox="0 0 280 220" aria-hidden="true">
+          <defs><linearGradient id="fn1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2997ff"/><stop offset=".5" stop-color="#a855f7"/><stop offset="1" stop-color="#ff375f"/></linearGradient></defs>
+          <path d="M20 18h240l-34 44H54z" fill="#2c2c2e"/>
+          <path d="M58 72h164l-30 44H88z" fill="#3a3a3c"/>
+          <path d="M92 126h96l-24 44h-48z" fill="url(#fn1)"/>
+          <rect x="118" y="178" width="44" height="34" rx="10" fill="url(#fn1)"/>
+          <text x="140" y="201" text-anchor="middle" font-family="Inter" font-weight="800" font-size="15" fill="#fff">£</text>
+          <path d="M236 150v52m0 0l-12-12m12 12l12-12" stroke="#30d158" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
         </svg>
       </article>
 
@@ -533,7 +609,7 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="wrap">
       <div class="center">
         <p class="eyebrow rv">Get to know the man.</p>
-        <h2 class="h-l rv" style="margin-top:10px">What's in the box.</h2>
+        <h2 class="h-l rv" style="margin-top:10px">Focus Points.</h2>
         <p class="sub rv">Everything you need to take AI from strategy to production.</p>
       </div>
       <div class="box">
@@ -563,9 +639,9 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         </svg>
         <div class="contents">
           <div class="ci rv"><i>🧭</i><b>AI strategy</b><span>Vision and roadmap for conversational, generative and agentic AI.</span></div>
-          <div class="ci rv"><i>🛠️</i><b>Design &amp; build</b><span>Bots, NLP, NLU and messaging, from idea to production.</span></div>
-          <div class="ci rv"><i>📈</i><b>Commercial acumen</b><span>Budgets, contracts and revenue-led propositions.</span></div>
-          <div class="ci rv"><i>🤝</i><b>Partner management</b><span>Live chat, messaging, voice and cloud providers.</span></div>
+          <div class="ci rv"><i>🛠️</i><b>Design &amp; build</b><span>AI agents, bots, NLP, NLU and messaging, from inception to production.</span></div>
+          <div class="ci rv"><i>📈</i><b>Executive influence</b><span>Secures board investment, aligns senior stakeholders and resolves competing priorities.</span></div>
+          <div class="ci rv"><i>🛡️</i><b>Trust &amp; compliance</b><span>Accountable for data privacy, security and regulatory compliance across every entry point.</span></div>
           <div class="ci rv"><i>👥</i><b>Team leadership</b><span>OKRs and high-performance design frameworks.</span></div>
           <div class="ci rv"><i>📊</i><b>Data-driven insight</b><span>Analytics that guide product owners and investment.</span></div>
         </div>
@@ -609,7 +685,7 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           </details>
           <p class="prev">Previously at Virgin Media: Senior Product Manager, Chatbots &amp; Web Messaging (2016 – 2021).</p>
           <div class="spacer"></div>
-          <a class="btn" href="#checkout" data-add>Hire Chris</a>
+          <a class="btn" href="#checkout" data-add>Contact Us</a>
         </article>
 
         <article class="gen rv">
@@ -692,13 +768,54 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         </div>
         <div class="award rv">
           <svg viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="#e5e5ea" stroke-width="3" stroke-linecap="round"><path d="M38 96C18 82 14 52 26 30"/><path d="M82 96c20-14 24-44 12-66"/></g><g fill="#e5e5ea"><ellipse cx="22" cy="44" rx="5" ry="10" transform="rotate(-30 22 44)"/><ellipse cx="20" cy="62" rx="5" ry="10" transform="rotate(-10 20 62)"/><ellipse cx="26" cy="79" rx="5" ry="10" transform="rotate(20 26 79)"/><ellipse cx="98" cy="44" rx="5" ry="10" transform="rotate(30 98 44)"/><ellipse cx="100" cy="62" rx="5" ry="10" transform="rotate(10 100 62)"/><ellipse cx="94" cy="79" rx="5" ry="10" transform="rotate(-20 94 79)"/></g><text x="60" y="58" text-anchor="middle" font-family="Inter" font-weight="800" font-size="13" fill="#fff">WINNER</text><text x="60" y="78" text-anchor="middle" font-family="Inter" font-weight="700" font-size="18" fill="#e5e5ea">2023</text></svg>
-          <div><h3>Digiday Tech Award</h3><p>2023</p></div>
+          <div><h3>Digiday Technology Award</h3><p>2023 · Best E-Commerce Technology, Virgin Media with LivePerson</p></div>
         </div>
       </div>
       <div class="edu">
         <div class="card rv"><p class="eyebrow">Education</p><h3>Digital &amp; Programmatic Marketing</h3><p>Google Squared Online</p></div>
         <div class="card rv"><p class="eyebrow">Education</p><h3>Business Management</h3><p>University of Birmingham</p></div>
       </div>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section id="featured" class="dark pad">
+    <div class="wrap">
+      <div class="center">
+        <h2 class="h-l rv">Featured &amp; Speaking.</h2>
+        <p class="sub rv">Published, interviewed and on stage.</p>
+      </div>
+      <div class="feats">
+        <a class="feat rv" href="https://www.liveperson.com/blog/vm-digital-customer-engagement-strategy/" target="_blank" rel="noopener">
+          <span class="fi" aria-hidden="true"><svg viewBox="0 0 34 34"><path d="M9 23l2.5-7.5L24 3l5 5-12.5 12.5z" fill="none" stroke="#fff" stroke-width="2.4" stroke-linejoin="round"/><path d="M8 29h18" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+          <p class="ftype">Article · Author</p>
+          <h3>Meeting customers where they are: How Conversational AI became Virgin Media’s digital customer engagement strategy</h3>
+          <p class="fsrc">LivePerson · December 2022</p>
+          <span class="more">Read the article</span>
+        </a>
+        <a class="feat rv" href="https://www.liveperson.com/blog/ai-transformation-at-virgin-media/" target="_blank" rel="noopener">
+          <span class="fi" aria-hidden="true"><svg viewBox="0 0 34 34"><rect x="12" y="3" width="10" height="17" rx="5" fill="none" stroke="#fff" stroke-width="2.4"/><path d="M7 15a10 10 0 0 0 20 0M17 25v5M12 30h10" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+          <p class="ftype">Feature · Podcast interview</p>
+          <h3>AI transformation at Virgin Media: Meeting customer needs with AI tools</h3>
+          <p class="fsrc">LivePerson · October 2023 · from the Generation AI podcast</p>
+          <span class="more">Read the feature</span>
+        </a>
+        <a class="feat rv" href="https://www.youtube.com/watch?v=AOwVwjGGEe8" target="_blank" rel="noopener">
+          <span class="fi" aria-hidden="true"><svg viewBox="0 0 34 34"><path d="M12 7l16 10-16 10z" fill="#fff"/></svg></span>
+          <p class="ftype">Keynote · Video</p>
+          <h3>Keynote: Christopher Huggins at the Conversational AI &amp; Experience Summit (2nd Edition)</h3>
+          <p class="fsrc">YouTube</p>
+          <span class="more">Watch the keynote</span>
+        </a>
+        <a class="feat rv" href="https://digiday.com/media/liveperson-virgin-media-papercup-and-seismic-are-2023-digiday-technology-awards-winners/" target="_blank" rel="noopener">
+          <span class="fi" aria-hidden="true"><svg viewBox="0 0 34 34"><path d="M10 4h14v8a7 7 0 0 1-14 0zM10 7H5a5 5 0 0 0 5 6M24 7h5a5 5 0 0 1-5 6M17 19v6M11 30h12M13 25h8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p class="ftype">Award</p>
+          <h3>Best E-Commerce Technology, Digiday Technology Awards 2023</h3>
+          <p class="fsrc">Digiday · August 2023 · Virgin Media with LivePerson</p>
+          <span class="more">Read the announcement</span>
+        </a>
+      </div>
+      <p class="fnote rv">Published results: <a href="https://www.casestudies.com/company/liveperson/case-study/building-virgin-medias-conversational-selling-machine" target="_blank" rel="noopener">up to 42% digital sales conversion and 29% lower cost per acquisition</a>, from LivePerson’s Virgin Media case study.</p>
     </div>
   </section>
 
@@ -722,7 +839,7 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
             <div><dt>Response time</dt><dd>Within 24 hours</dd></div>
           </dl>
           <div class="total"><span>Value delivered to date</span><b class="grad">£52m+</b></div>
-          <p class="fine">Returns not expected. Comes fully configured for enterprise AI.</p>
+          <p class="fine">Comes fully configured for enterprise AI.</p>
         </aside>
 
         <div class="formcard rv">
@@ -756,8 +873,7 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="fineprint">
       <span>Figures relate to roles at Virgin Media O2, Sitel Group UK and CCI South Africa. Results achieved with brilliant teams and partners.</span>
-      <span>The Digital Specialist answers only from the information on this page. For anything else, contact Chris directly.</span>
-      <span>CSH stands for Christopher Simon Huggins.</span>
+      <span>Site designed and built by Chris Huggins.</span>
     </div>
     <div class="row"><span>© <span id="yr"></span> Chris Huggins (Christopher Simon Huggins). All rights reserved.</span><span>United Kingdom</span></div>
   </div>
@@ -1180,7 +1296,7 @@ function corpus(){
   $all('.feature .tile.black').forEach(t=>add(`${END(T($1('h2',t)))} ${T($1('.sub',t))}`,'Overview'));
   const promo=$1('.promo'); if(promo){const c=promo.cloneNode(true);c.querySelectorAll('a').forEach(a=>a.remove());add(c.textContent,'Availability');}
   $all('.hl').forEach(h=>add(`${T($1('.eyebrow',h))}: ${END(T($1('h3',h)))} ${T($1('p:not(.eyebrow)',h))}`,'Highlights'));
-  $all('.ci').forEach(c=>add(`${T($1('b',c))}: ${T($1('span',c))}`,"What's in the box"));
+  $all('.ci').forEach(c=>add(`${T($1('b',c))}: ${T($1('span',c))}`,'Focus Points'));
   $all('.gen').forEach(g=>{
     const co=T($1('.eyebrow',g)), ti=T($1('h3',g)).replace(/\.$/,''), yr=T($1('.yrs',g));
     add(`${ti} at ${co}${yr?` (${yr})`:''}. ${END(T($1('.l',g)))} Headline result: ${END(T($1('.price',g)))}`,'Experience');
@@ -1200,12 +1316,14 @@ function corpus(){
     add(`${T($1('.total span',sum))}: ${END(T($1('.total b',sum)))}`,'Contact');
   }
   add(T($1('#checkout .formcard > p')),'Contact');
+  $all('.feat').forEach(f=>add(`${T($1('.ftype',f))}: ${T($1('h3',f))} (${T($1('.fsrc',f))}).`,'Featured'));
+  add(T($1('.fnote')),'Featured');
   $all('footer .fineprint span').forEach(f=>add(T(f),'Footer'));
   return U;
 }
 
 /* Words that carry no meaning in a question */
-const STOP=new Set(`a an the and or of to in on for with at by from as is are was were be been being it its this that these those what whats which who whom whose how many much does did do done has have had he him his himself chris christopher huggins simon can could would will should you your me my i we our tell about please any some there their they them get got give show know let lets than then also just very more most like where when time spent use used using uses work worked working biggest best main key top largest greatest major big good great`.split(/\s+/));
+const STOP=new Set(`a an the and or of to in on for with at by from as is are was were be been being it its this that these those what whats which who whom whose how many much does did do done has have had he him his himself chris christopher huggins simon can could would will should you your me my i we our tell about please any some there their they them get got give show know let lets than then also just very more most like rate rates achieve achieved achieving achiev where when time spent use used using uses work worked working biggest best main key top largest greatest major big good great`.split(/\s+/));
 const stem=w=>{
   if(w.length>5&&w.endsWith('ing'))return w.slice(0,-3);
   if(w.length>4&&w.endsWith('ied'))return w.slice(0,-3)+'y';
@@ -1244,6 +1362,8 @@ Object.entries({
   customer:'csat nps customer',satisfaction:'csat nps',
   overview:'leader enterprise transformation',summary:'leader enterprise transformation',background:'leader enterprise transformation',introduce:'leader enterprise transformation',
   strength:'capabilities strategy',
+  published:'article author featured',publish:'article author featured',article:'article feature',blog:'article feature',wrote:'author article',written:'author article',write:'author article',speak:'keynote speaking',speaker:'keynote speaking',spoken:'keynote speaking',talk:'keynote speaking',keynote:'keynote',conference:'keynote summit',event:'keynote summit',podcast:'podcast',interview:'podcast interview feature',interviewed:'podcast interview feature',press:'featured article',featured:'featured',video:'keynote video',youtube:'keynote video',conversion:'conversion',cpa:'acquisition',
+  responsible:'accountable',responsibility:'accountable',accountability:'accountable',governance:'compliance accountable',regulation:'regulatory compliance',gdpr:'privacy compliance',
   vmo2:'virgin media o2',before:'previously',prior:'previously',earlier:'previously',previous:'previously',
   code:'programming language',coding:'programming language',program:'programming language',programming:'programming language',developer:'programming language api',language:'programming language',technical:'programming api architecture compatibility',engineering:'programming api architecture engineered'
 }).forEach(([k,v])=>SYN[stem(k)]=v.split(' ').map(stem));
@@ -1277,7 +1397,7 @@ function answer(q){
   const scored=docs.map((d,i)=>{
     let s=0,direct=0;
     terms.forEach((w,t)=>{if(d.some(x=>match(x,t))){s+=w*idf(t);if(w===1)direct++;}});
-    return {u:U[i],s:s/(1+d.length/45),direct};
+    return {u:U[i],s:s/(1+d.length/45)*(U[i].src==='Footer'?0.5:1),direct};
   }).filter(x=>x.s>0).sort((a,b)=>b.s-a.s);
 
   // Specific words (names, tools, topics) carry the question. If none of them is on the page, don't answer around it.
