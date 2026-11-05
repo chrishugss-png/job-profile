@@ -1600,9 +1600,13 @@ function roleCards(units){
       <a class="act ghost" href="#lineup" data-close>See on the page</a></div>`;
   }).join('');
 }
-function featuredCards(units){
+function featuredCards(units,q){
   let feats=uniq(units.map(u=>u.el).filter(e=>e&&e.classList&&e.classList.contains('feat')));
   if(!feats.length) feats=$all('.feat');
+  if(/\b(spoke|spoken|speak\w*|events?|talks?|keynotes?|conferences?|publish\w*|articles?|wrote|written|writing|podcasts?|interview\w*|featured)\b/i.test(q||'')){
+    const isAward=f=>/^award/i.test(T($1('.ftype',f)));
+    feats=uniq(feats.filter(f=>!isAward(f)).concat($all('.feat').filter(f=>!isAward(f))));
+  }
   const cards=feats.map(f=>`<a class="fcard" href="${esc(f.getAttribute('href'))}" target="_blank" rel="noopener">
       <span class="fi" aria-hidden="true">${$1('.fi',f)?$1('.fi',f).innerHTML:''}</span>
       <span class="ft"><small>${esc(T($1('.ftype',f)))}</small><b>${esc(T($1('h3',f)))}</b><span>${esc(T($1('.fsrc',f)))}</span></span><i aria-hidden="true">↗</i></a>`);
@@ -1643,7 +1647,7 @@ function noneCard(msg){
     ${mail?`<div class="acts"><a class="act" href="${esc(mail)}">Ask Chris directly</a></div>`:''}</div>`;
 }
 
-const FOLLOW={Overview:['What results has he delivered?','Tell me about his experience'],Highlights:['How was the value figure calculated?','Team and budget size?'],
+const FOLLOW={Overview:['What results has he delivered?','Tell me about his experience'],Highlights:['What will he bring to our team?','Team and budget size?'],
   Experience:['What results has he delivered?','Has he spoken at events?'],Featured:['What awards has he won?','How do I contact him?'],
   Awards:['Has he been published?','Who is Chris?'],Education:['Tell me about his experience','What tech does he know?'],
   'Tech Specs':['Has he worked with APIs?','What are his focus points?'],'Focus Points':['What tech does he know?','Tell me about his experience'],
@@ -1654,6 +1658,9 @@ const LEAD={Highlights:'Here are the headline results, taken straight from the p
 
 function respond(q){
   const r=retrieve(q);
+  if(/\b(bring|offer|contribut\w*|add to|strengths?|why (hire|should)|what can (he|chris) do)\b/i.test(q)&&$all('.ci').length){
+    return {rich:true,html:lead("Here's what Chris brings, from the Focus Points on the page.")+focusCards([])+`<span class="rsrc">From this page: Focus Points</span>`+follow(FOLLOW['Focus Points'])};
+  }
   if(r.kind==='overview') return {rich:true,html:profileCard()+`<span class="rsrc">From this page: Overview</span>`+follow(FOLLOW.Overview)};
   if(r.kind==='missing') return {rich:true,html:noneCard(`${r.noteMissing}, so I won't guess.`)+follow(FOLLOW.none)};
   if(r.kind==='none') return {rich:true,html:noneCard("That isn't covered on this page, so I won't guess.")+follow(FOLLOW.none)};
@@ -1665,7 +1672,7 @@ function respond(q){
   const wantsCV=/\b(cv|resume|résumé)\b/i.test(q), wantsContact=/\b(contact|email|e-mail|hire|reach|touch|available|availability|notice)\b/i.test(q);
   let kind=top;
   if(wantsCV||top==='Contact'||top==='Availability'||(wantsContact&&top==='Footer')) kind='contact';
-  const builders={Overview:()=>profileCard(),Highlights:()=>resultsCarousel(),Experience:u=>roleCards(u),Featured:u=>featuredCards(u),
+  const builders={Overview:()=>profileCard(),Highlights:()=>resultsCarousel(),Experience:u=>roleCards(u),Featured:u=>featuredCards(u,q),
     Awards:()=>awardBadges(),Education:()=>eduCards(),'Tech Specs':u=>skillsBlock(u),'Focus Points':u=>focusCards(u),contact:()=>contactCard()};
   if(!builders[kind]) return {rich:false,html:render(picks,r.noteMissing?`${r.noteMissing}, so I can't speak to that.`:'')+follow(FOLLOW[kind]||FOLLOW.none)};
   const mine=kind==='contact'?picks.filter(u=>['Contact','Availability','Footer'].includes(u.src)):picks.filter(u=>u.src===top);
