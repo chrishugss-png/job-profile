@@ -408,6 +408,131 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .rv{opacity:1;transform:none;transition:none}
   .chip,.chipwrap .halo,.typing i{animation:none}
 }
+
+/* ===== Digital twin: rich answers ===== */
+.panel{width:min(440px,calc(100vw - 32px));height:min(680px,calc(100vh - 80px));transition:.25s ease,width .3s ease,height .3s ease}
+.panel.big{width:min(780px,calc(100vw - 32px));height:min(880px,calc(100vh - 40px))}
+.phead > div{min-width:0}
+.phead small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.expand{margin-left:auto;background:var(--grey2);border:none;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:14px;color:#6e6e73;flex:none}
+.expand[aria-pressed="true"]{background:#1d1d1f;color:#fff}
+.phead .close{margin-left:8px;flex:none}
+.m.rich{max-width:100%;align-self:stretch;background:transparent;padding:0;border-radius:0}
+.rsrc{display:block;margin-top:8px;font-size:11px;color:#86868b}
+.lead-line{font-size:15px;line-height:1.42;background:var(--grey2);border-radius:18px;border-bottom-left-radius:6px;padding:10px 14px;margin-bottom:10px;display:inline-block}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.acts.tight{margin-top:8px}
+.m .act{display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:980px;padding:9px 15px;font:600 13px Inter,sans-serif;background:#0071e3;color:#fff;border:none;cursor:pointer;text-decoration:none}
+.m .act.ghost{background:transparent;color:#1d1d1f;box-shadow:inset 0 0 0 1px #d2d2d7}
+.m .pcard .act.ghost{color:#f5f5f7;box-shadow:inset 0 0 0 1px #48484a}
+.ccard .acts .act{flex:1}
+/* profile */
+.pcard{position:relative;overflow:hidden;background:#000;color:#f5f5f7;border-radius:22px;padding:20px}
+.pcard::before{content:"";position:absolute;right:-90px;top:-90px;width:240px;height:240px;border-radius:50%;background:conic-gradient(from 30deg,#2997ff,#a855f7,#ff375f,#2997ff);filter:blur(60px);opacity:.45}
+.pcard .top{position:relative;display:flex;gap:14px;align-items:center}
+.pcard .ph{width:68px;height:68px;border-radius:50%;padding:2.5px;background:var(--grad);flex:none}
+.pcard .ph img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 28%;display:block;border:2px solid #000}
+.pcard .nm{font-size:18px;font-weight:700;letter-spacing:-.02em}
+.pcard .tl{font-size:13px;color:#a1a1a6;margin-top:2px;line-height:1.35}
+.pstats{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.pstats div{background:rgba(255,255,255,.06);border-radius:14px;padding:11px 10px}
+.pstats b{display:block;font-size:19px;font-weight:700;letter-spacing:-.02em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pstats span{display:block;font-size:11px;color:#a1a1a6;margin-top:2px;line-height:1.25}
+.pcard .acts{position:relative}
+/* results carousel */
+.rc{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:16px;margin:0 -16px;padding:2px 16px 4px;scrollbar-width:none}
+.rc::-webkit-scrollbar{display:none}
+.rc .hl{flex:0 0 238px;height:316px;padding:20px 18px;border-radius:20px;scroll-snap-align:start}
+.rc .hl:hover{transform:none}
+.rc .hl h3{font-size:30px;margin-top:4px}
+.rc .hl p{font-size:13px;line-height:1.35}
+.rc .hl .eyebrow{font-size:11px}
+.rc .hl svg{height:132px;margin-top:auto}
+.panel.big .rc .hl{flex-basis:300px;height:380px}
+.panel.big .rc .hl svg{height:170px}
+.rdots{display:flex;gap:6px;justify-content:center;margin-top:10px}
+.rdots i{width:6px;height:6px;border-radius:50%;background:#d2d2d7;transition:width .2s}
+.rdots i.on{width:18px;border-radius:3px;background:#1d1d1f}
+/* role cards */
+.rcard{background:#000;color:#f5f5f7;border-radius:22px;padding:18px 18px 16px}
+.rcard+.rcard{margin-top:10px}
+.rtop{display:flex;gap:12px;align-items:center}
+.rico svg{width:46px;height:46px;display:block}
+.rtop small{display:block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#86868b}
+.rtop b{display:block;font-size:16px;letter-spacing:-.01em;margin-top:2px;line-height:1.25}
+.rtop span{display:block;font-size:12px;color:#86868b;margin-top:2px}
+.rprice{font-size:16px;font-weight:700;margin-top:12px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.rlead{font-size:13px;color:#d2d2d7;margin-top:8px;line-height:1.45}
+.rcard ul{list-style:none;margin-top:10px;display:flex;flex-direction:column;gap:8px}
+.rcard li{font-size:13px;line-height:1.45;color:#d2d2d7;padding-left:14px;position:relative}
+.rcard li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:#2997ff}
+.rcard .rmatch li{color:#f5f5f7}
+.rcard details{margin-top:10px;border-top:1px solid #2a2a2d;padding-top:8px}
+.rcard summary{cursor:pointer;color:#2997ff;font-size:13px;list-style:none}
+.rcard summary::-webkit-details-marker{display:none}
+.rcard summary::after{content:" +"}
+.rcard details[open] summary::after{content:" –"}
+.m .rcard .act.ghost{color:#f5f5f7;box-shadow:inset 0 0 0 1px #48484a;margin-top:12px}
+/* featured link cards */
+.fstack{display:flex;flex-direction:column;gap:8px}
+.m a.fcard{display:flex;gap:12px;align-items:center;background:#000;color:#f5f5f7;border-radius:18px;padding:14px;text-decoration:none;transition:transform .2s}
+.m a.fcard:hover{transform:translateY(-2px)}
+.fcard .fi{width:40px;height:40px;border-radius:50%;background:var(--grad);display:grid;place-items:center;flex:none;color:#fff;font-weight:700;margin:0}
+.fcard .fi svg{width:19px;height:19px}
+.fcard .ft{min-width:0;flex:1}
+.fcard small{display:block;font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#86868b}
+.fcard b{display:block;font-size:14px;line-height:1.3;margin-top:2px}
+.fcard .ft span{display:block;font-size:12px;color:#a1a1a6;margin-top:3px}
+.fcard i{font-style:normal;color:#2997ff;font-size:18px;flex:none}
+/* awards / education */
+.bstack{display:flex;flex-direction:column;gap:8px}
+.badge{display:flex;gap:14px;align-items:center;background:#000;color:#f5f5f7;border-radius:18px;padding:12px 16px}
+.badge svg{width:62px;height:62px;flex:none}
+.badge b{display:block;font-size:15px}
+.badge span{display:block;font-size:12px;color:#a1a1a6;margin-top:2px;line-height:1.35}
+.badge.edu{background:#fff;color:#1d1d1f;box-shadow:0 0 0 1px #e8e8ed}
+.badge.edu span{color:#6e6e73}
+.eic{width:44px;height:44px;border-radius:50%;background:var(--grey);display:grid;place-items:center;font-size:22px;flex:none}
+/* skills */
+.skg{background:#fff;border-radius:18px;padding:14px 16px;box-shadow:0 0 0 1px #e8e8ed}
+.skg+.skg{margin-top:8px}
+.skg small{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#86868b;margin-bottom:8px}
+.sks{display:flex;flex-wrap:wrap;gap:6px}
+.sk{display:inline-flex;align-items:center;gap:6px;background:var(--grey);border-radius:980px;padding:6px 11px;font-size:13px}
+.sk em{font-style:normal;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:#1d1d1f;color:#fff;border-radius:980px;padding:2px 7px}
+/* focus points */
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.fp{background:#fff;border-radius:16px;padding:14px;box-shadow:0 0 0 1px #e8e8ed}
+.fp i{font-style:normal;font-size:20px;display:block}
+.fp b{display:block;font-size:14px;margin-top:6px}
+.fp span{display:block;font-size:12px;color:#6e6e73;margin-top:3px;line-height:1.35}
+/* contact */
+.ccard,.ncard{background:#fff;border-radius:22px;padding:20px;box-shadow:0 0 0 1px #e8e8ed,0 6px 24px rgba(0,0,0,.06)}
+.ccard .ic,.ncard .ic{width:44px;height:44px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff;font-size:20px;font-weight:700}
+.ccard h4{font-size:19px;letter-spacing:-.02em;margin-top:12px}
+.ccard .row{display:flex;justify-content:space-between;gap:12px;font-size:14px;padding:9px 0;border-bottom:1px solid #f0f0f2}
+.ccard .row:last-of-type{border:none}
+.ccard .row span{color:#86868b}
+.ccard .row b{font-weight:600;text-align:right}
+.ccard .row b.ok{color:#28a745}
+.ncard p{font-size:15px;margin-top:12px;line-height:1.4}
+.ncard p.sub2{font-size:13px;color:#86868b;margin-top:4px}
+/* extras */
+.also{margin-top:10px;background:var(--grey2);border-radius:16px;padding:10px 14px}
+.also small{display:block;font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px}
+.also p{font-size:13px;line-height:1.42}
+.also p+p{margin-top:6px}
+.miss{font-size:13px;color:#86868b;margin-top:8px}
+.notecard{background:#fff;border-radius:18px;padding:14px 16px;box-shadow:0 0 0 1px #e8e8ed;font-size:13px;line-height:1.5;color:#1d1d1f}
+.notecard p+p{margin-top:8px}
+.m .notecard a{color:var(--blue)}
+.next{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.next button{background:#fff;border:1px solid #d2d2d7;border-radius:980px;padding:6px 12px;font:500 12px Inter,sans-serif;color:#1d1d1f;cursor:pointer}
+.next button:hover{border-color:var(--blue);color:var(--blue)}
+@media (max-width:520px){
+  .panel,.panel.big{right:0;bottom:0;width:100vw;height:100dvh;border-radius:0}
+  .expand{display:none}
+}
 </style>
 </head>
 <body>
@@ -1241,7 +1366,7 @@ footer .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <path d="M378,542 Q400,550 422,542" fill="none" stroke="#5a3322" stroke-width="3" stroke-linecap="round"/>
   </g>
 
-</svg></span><div><b>Chris's Digital Twin</b><small>● Online · answers from this page only</small></div><button class="close" aria-label="Close">✕</button></div>
+</svg></span><div><b>Chris's Digital Twin</b><small>● Online · answers from this page only</small></div><button class="expand" type="button" aria-label="Expand chat" aria-pressed="false">⤢</button><button class="close" aria-label="Close">✕</button></div>
   <div class="msgs" id="msgs" aria-live="polite"></div>
   <div class="chips" id="chips"></div>
   <form class="pform" id="pform"><input id="q" placeholder="Ask about Chris's experience…" autocomplete="off" aria-label="Your question"><button aria-label="Send">↑</button></form>
@@ -1308,35 +1433,35 @@ const $1=(s,r=document)=>r.querySelector(s), $all=(s,r=document)=>[...r.querySel
 
 function corpus(){
   const U=[];
-  const add=(text,src)=>{text=(text||'').replace(/[●•]/g,'').replace(/\s+/g,' ').trim();if(text.length>3&&!U.some(u=>u.text===text))U.push({text,src});};
-  add(`${T($1('.hero h1'))} ${END(T($1('.hero .sub')))}`,'Overview');
-  add(T($1('.mission .big')),'Overview');
-  $all('.feature .tile.black').forEach(t=>add(`${END(T($1('h2',t)))} ${T($1('.sub',t))}`,'Overview'));
+  const add=(text,src,el)=>{text=(text||'').replace(/[●•]/g,'').replace(/\s+/g,' ').trim();if(text.length>3&&!U.some(u=>u.text===text))U.push({text,src,el});};
+  add(`${T($1('.hero h1'))} ${END(T($1('.hero .sub')))}`,'Overview',$1('.hero'));
+  add(T($1('.mission .big')),'Overview',$1('.mission'));
+  $all('.feature .tile.black').forEach(t=>add(`${END(T($1('h2',t)))} ${T($1('.sub',t))}`,'Overview',t));
   const promo=$1('.promo'); if(promo){const c=promo.cloneNode(true);c.querySelectorAll('a').forEach(a=>a.remove());add(c.textContent,'Availability');}
-  $all('.hl').forEach(h=>add(`${T($1('.eyebrow',h))}: ${END(T($1('h3',h)))} ${T($1('p:not(.eyebrow)',h))}`,'Highlights'));
-  $all('.ci').forEach(c=>add(`${T($1('b',c))}: ${T($1('span',c))}`,'Focus Points'));
+  $all('.hl').forEach(h=>add(`${T($1('.eyebrow',h))}: ${END(T($1('h3',h)))} ${T($1('p:not(.eyebrow)',h))}`,'Highlights',h));
+  $all('.ci').forEach(c=>add(`${T($1('b',c))}: ${T($1('span',c))}`,'Focus Points',c));
   $all('.gen').forEach(g=>{
     const co=T($1('.eyebrow',g)), ti=T($1('h3',g)).replace(/\.$/,''), yr=T($1('.yrs',g));
-    add(`${ti} at ${co}${yr?` (${yr})`:''}. ${END(T($1('.l',g)))} Headline result: ${END(T($1('.price',g)))}`,'Experience');
-    $all('li',g).forEach(li=>{const pr=li.closest('.prev-role');add(pr?`${T($1('.prevh',pr))}: ${END(T(li))}`:`At ${co} (${ti}): ${END(T(li))}`,'Experience');});
-    add(T($1('.prev',g)),'Experience');
+    add(`${ti} at ${co}${yr?` (${yr})`:''}. ${END(T($1('.l',g)))} Headline result: ${END(T($1('.price',g)))}`,'Experience',g);
+    $all('li',g).forEach(li=>{const pr=li.closest('.prev-role');add(pr?`${T($1('.prevh',pr))}: ${END(T(li))}`:`At ${co} (${ti}): ${END(T(li))}`,'Experience',li);});
+    add(T($1('.prev',g)),'Experience',g);
   });
   $all('.srow').forEach(r=>{
     const vals=$all('.v > div',r).map(d=>{const v=T($1('span',d));return `${T($1('b',d))}${/^[A-Z][a-z]/.test(v)?', ':' '}${v}`;});
     const tags=$all('.compat span',r).map(s=>{const em=$1('em',s);const n=[...s.childNodes].filter(x=>x.nodeType===3).map(x=>x.textContent).join('').trim();return em?`${n} (${T(em)})`:n;});
-    add(`${T($1('h3',r))}: ${[...vals,...tags].join(', ')}.`,'Tech Specs');
+    add(`${T($1('h3',r))}: ${[...vals,...tags].join(', ')}.`,'Tech Specs',r);
   });
-  $all('.award').forEach(a=>add(`Award: ${T($1('h3',a))} (${T($1('p',a))}).`,'Awards'));
-  $all('.edu .card').forEach(c=>add(`${T($1('.eyebrow',c))}: ${T($1('h3',c))}, ${T($1('p:not(.eyebrow)',c))}.`,'Education'));
+  $all('.award').forEach(a=>add(`Award: ${T($1('h3',a))} (${T($1('p',a))}).`,'Awards',a));
+  $all('.edu .card').forEach(c=>add(`${T($1('.eyebrow',c))}: ${T($1('h3',c))}, ${T($1('p:not(.eyebrow)',c))}.`,'Education',c));
   const sum=$1('.summary');
   if(sum){
-    $all('dl > div',sum).forEach(d=>add(`${T($1('dt',d))}: ${END(T($1('dd',d)))}`,'Contact'));
-    add(`${T($1('.total span',sum))}: ${END(T($1('.total b',sum)))}`,'Contact');
+    $all('dl > div',sum).forEach(d=>add(`${T($1('dt',d))}: ${END(T($1('dd',d)))}`,'Contact',sum));
+    add(`${T($1('.total span',sum))}: ${END(T($1('.total b',sum)))}`,'Contact',sum);
   }
-  add(T($1('#checkout .formcard > p')),'Contact');
-  $all('.feat').forEach(f=>add(`${T($1('.ftype',f))}: ${T($1('h3',f))} (${T($1('.fsrc',f))}).`,'Featured'));
-  add(T($1('.fnote')),'Featured');
-  $all('footer .fineprint span').forEach(f=>add(T(f),'Footer'));
+  add(T($1('#checkout .formcard > p')),'Contact',$1('.summary'));
+  $all('.feat').forEach(f=>add(`${T($1('.ftype',f))}: ${T($1('h3',f))} (${T($1('.fsrc',f))}).`,'Featured',f));
+  add(T($1('.fnote')),'Featured',$1('.fnote'));
+  $all('footer .fineprint span').forEach(f=>add(T(f),'Footer',f));
   return U;
 }
 
@@ -1403,46 +1528,176 @@ function render(units,note){
   return h+`<span class="src">From this page: ${esc(srcs.join(' · '))}</span>`;
 }
 
-function answer(q){
+/* ===== Rich answers: the twin selects approved components from this page; it never writes the facts ===== */
+function retrieve(q){
   const U=corpus(), docs=U.map(u=>tok(u.text+' '+u.src)), N=docs.length;
   const orig=new Map(), base=[...new Set(tok(q,orig))];
-  if(!base.length) return render(U.filter(u=>u.src==='Overview').slice(0,2));
-
+  if(!base.length) return {kind:'overview',U,picks:[]};
   const terms=new Map(); base.forEach(t=>terms.set(t,1));
   base.forEach(t=>(SYN[t]||[]).forEach(s=>{if(!terms.has(s))terms.set(s,.6);}));
   const df=new Map(); terms.forEach((_,t)=>df.set(t,docs.filter(d=>d.some(x=>match(x,t))).length));
   const idf=t=>Math.log(1+N/Math.max(1,df.get(t)));
-
   const scored=docs.map((d,i)=>{
     let s=0,direct=0;
     terms.forEach((w,t)=>{if(d.some(x=>match(x,t))){s+=w*idf(t);if(w===1)direct++;}});
     return {u:U[i],s:s/(1+d.length/45)*(U[i].src==='Footer'?0.5:1),direct};
   }).filter(x=>x.s>0).sort((a,b)=>b.s-a.s);
-
   // Specific words (names, tools, topics) carry the question. If none of them is on the page, don't answer around it.
   const specific=base.filter(t=>!SYN[t]);
   const missingT=specific.filter(t=>!df.get(t)), missing=missingT.map(t=>orig.get(t)||t);
   const noteMissing=missing.length?`The page doesn't mention ${esc(missing.map(m=>`“${m}”`).join(' or '))}`:'';
-  if(specific.length&&missingT.length===specific.length&&specific.length>=base.length-1&&missing.length){
-    return `${noteMissing}, so I won't guess.${askDirect()}`;
+  if(specific.length&&missingT.length===specific.length&&specific.length>=base.length-1&&missing.length) return {kind:'missing',U,picks:[],noteMissing};
+  if(!scored.length||scored[0].s<0.6) return {kind:'none',U,picks:[]};
+  const best=scored[0].s;
+  return {kind:'picks',U,picks:scored.filter(x=>x.s>=best*0.55).slice(0,3).map(x=>x.u),noteMissing};
+}
+
+/* Plain-text answer (also the fallback) */
+function answer(q){
+  const r=retrieve(q);
+  if(r.kind==='overview') return render(r.U.filter(u=>u.src==='Overview').slice(0,2));
+  if(r.kind==='missing') return `${r.noteMissing}, so I won't guess.${askDirect()}`;
+  if(r.kind==='none') return `That isn't covered on this page, so I won't guess.${askDirect()}`;
+  return render(r.picks,r.noteMissing?`${r.noteMissing}, so I can't speak to that.`:'');
+}
+
+/* ---- Components, each built from elements already on the page ---- */
+const uniq=a=>[...new Set(a)];
+const follow=list=>`<div class="next">${list.map(t=>`<button type="button">${esc(t)}</button>`).join('')}</div>`;
+const srcLine=units=>`<span class="rsrc">From this page: ${esc(uniq(units.map(u=>u.src)).join(' · '))}</span>`;
+const lead=t=>t?`<div class="lead-line">${esc(t)}</div>`:'';
+const cvLink=()=>$all('footer a').find(a=>T(a).toLowerCase()==='request');
+const mailHref=()=>{const a=$1('.summary a[href^="mailto:"]')||$1('a[href^="mailto:"]');return a?a.getAttribute('href'):'';};
+
+function profileCard(){
+  const stats=$all('.hero-foot > div').slice(0,3).map(d=>`<div><b>${esc(T($1('b',d)))}</b><span>${esc(T($1('span',d)))}</span></div>`).join('');
+  return `<div class="pcard"><div class="top"><div class="ph"><img src="avatar.png" alt=""></div>
+    <div><div class="nm">${esc(T($1('.hero h1')))}</div><div class="tl">${esc(T($1('.hero .sub')))}</div></div></div>
+    <div class="pstats">${stats}</div>
+    <div class="acts"><a class="act" href="#lineup" data-close>See experience</a><a class="act ghost" href="#checkout" data-close>Contact Chris</a></div></div>`;
+}
+function resultsCarousel(){
+  const cards=$all('#strip .hl').map(c=>{const k=c.cloneNode(true);k.querySelectorAll('.ring,.draw').forEach(e=>e.style.strokeDashoffset=e.dataset.to||0);return k.outerHTML;});
+  return `<div class="rc" role="region" aria-label="Headline results">${cards.join('')}</div><div class="rdots">${cards.map((_,i)=>`<i${i?'':' class="on"'}></i>`).join('')}</div>`;
+}
+function roleCards(units){
+  const groups=new Map();
+  units.forEach(u=>{const pr=u.el&&u.el.closest&&u.el.closest('.prev-role');const g=pr||(u.el&&u.el.closest&&u.el.closest('.gen'));if(!g)return;if(!groups.has(g))groups.set(g,[]);if(u.el.tagName==='LI')groups.get(g).push(u.el);});
+  return [...groups].slice(0,2).map(([g,lis])=>{
+    if(g.classList.contains('prev-role')){
+      const all=$all('li',g);
+      return `<div class="rcard"><div class="rtop"><div><small>Previous role</small><b>${esc(T($1('.prevh',g)))}</b></div></div>
+        <ul class="rmatch">${(lis.length?lis:all).map(li=>`<li>${esc(T(li))}</li>`).join('')}</ul>
+        <a class="act ghost" href="#lineup" data-close>See on the page</a></div>`;
+    }
+    const all=$all('details > ul > li',g), icon=$1('svg',g);
+    const body=lis.length?`<ul class="rmatch">${lis.map(li=>`<li>${esc(T(li))}</li>`).join('')}</ul>`:`<p class="rlead">${esc(T($1('.l',g)))}</p>`;
+    const rest=all.filter(li=>!lis.includes(li));
+    return `<div class="rcard"><div class="rtop"><span class="rico">${icon?icon.outerHTML:''}</span>
+      <div><small>${esc(T($1('.eyebrow',g)))}</small><b>${esc(T($1('h3',g)).replace(/\.$/,''))}</b><span>${esc(T($1('.yrs',g)))}</span></div></div>
+      <p class="rprice">${esc(T($1('.price',g)))}</p>${body}
+      ${rest.length?`<details><summary>Full specs</summary><ul>${rest.map(li=>`<li>${esc(T(li))}</li>`).join('')}</ul></details>`:''}
+      <a class="act ghost" href="#lineup" data-close>See on the page</a></div>`;
+  }).join('');
+}
+function featuredCards(units){
+  let feats=uniq(units.map(u=>u.el).filter(e=>e&&e.classList&&e.classList.contains('feat')));
+  if(!feats.length) feats=$all('.feat');
+  const cards=feats.map(f=>`<a class="fcard" href="${esc(f.getAttribute('href'))}" target="_blank" rel="noopener">
+      <span class="fi" aria-hidden="true">${$1('.fi',f)?$1('.fi',f).innerHTML:''}</span>
+      <span class="ft"><small>${esc(T($1('.ftype',f)))}</small><b>${esc(T($1('h3',f)))}</b><span>${esc(T($1('.fsrc',f)))}</span></span><i aria-hidden="true">↗</i></a>`);
+  const note=units.find(u=>u.el&&u.el.classList&&u.el.classList.contains('fnote'));
+  if(note){const a=$1('a',note.el);if(a)cards.push(`<a class="fcard" href="${esc(a.getAttribute('href'))}" target="_blank" rel="noopener"><span class="fi" aria-hidden="true">%</span><span class="ft"><small>Published results</small><b>${esc(T(a))}</b><span>LivePerson case study</span></span><i aria-hidden="true">↗</i></a>`);}
+  return `<div class="fstack">${cards.join('')}</div>`;
+}
+function awardBadges(){
+  return `<div class="bstack">${$all('.award').map(a=>`<div class="badge">${$1('svg',a)?$1('svg',a).outerHTML:''}<div><b>${esc(T($1('h3',a)))}</b><span>${esc(T($1('p',a)))}</span></div></div>`).join('')}</div>`;
+}
+function eduCards(){
+  return `<div class="bstack">${$all('.edu .card').map(c=>`<div class="badge edu"><span class="eic" aria-hidden="true">🎓</span><div><b>${esc(T($1('h3',c)))}</b><span>${esc(T($1('p:not(.eyebrow)',c)))}</span></div></div>`).join('')}</div>`;
+}
+function skillsBlock(units){
+  let rows=uniq(units.map(u=>u.el).filter(e=>e&&e.classList&&e.classList.contains('srow')));
+  if(!rows.length) rows=$all('.srow');
+  return rows.map(r=>{
+    const chips=[...$all('.compat span',r).map(s=>{const em=$1('em',s);const n=[...s.childNodes].filter(x=>x.nodeType===3).map(x=>x.textContent).join('').trim();return `<span class="sk">${esc(n)}${em?`<em>${esc(T(em))}</em>`:''}</span>`;}),
+                 ...$all('.v > div',r).map(d=>`<span class="sk"><b>${esc(T($1('b',d)))}</b> ${esc(T($1('span',d)))}</span>`)];
+    return `<div class="skg"><small>${esc(T($1('h3',r)))}</small><div class="sks">${chips.join('')}</div></div>`;
+  }).join('');
+}
+function focusCards(units){
+  let cis=uniq(units.map(u=>u.el).filter(e=>e&&e.classList&&e.classList.contains('ci')));
+  if(cis.length<2) cis=cis.length?cis:$all('.ci');
+  return `<div class="fgrid">${cis.map(c=>`<div class="fp"><i>${esc(T($1('i',c)))}</i><b>${esc(T($1('b',c)))}</b><span>${esc(T($1('span',c)))}</span></div>`).join('')}</div>`;
+}
+function contactCard(){
+  const rows=$all('.summary dl > div').map(d=>{const v=T($1('dd',d)).replace('●','').trim();return `<div class="row"><span>${esc(T($1('dt',d)))}</span><b${/availab/i.test(T($1('dt',d)))?' class="ok"':''}>${esc(v)}</b></div>`;}).join('');
+  const cv=cvLink(), mail=mailHref();
+  return `<div class="ccard"><div class="ic" aria-hidden="true">✦</div><h4>${esc(T($1('.formcard h3'))||'Contact')}</h4>${rows}
+    <div class="acts">${mail?`<a class="act" href="${esc(mail)}">Email Chris</a>`:''}${cv?`<a class="act ghost" href="${esc(cv.getAttribute('href'))}">Request CV</a>`:''}</div>
+    <div class="acts tight"><a class="act ghost" href="#checkout" data-close>Go to contact form</a></div></div>`;
+}
+function noneCard(msg){
+  const mail=mailHref();
+  return `<div class="ncard"><div class="ic" aria-hidden="true">?</div><p>${msg}</p><p class="sub2">The twin only answers from what's on this page.</p>
+    ${mail?`<div class="acts"><a class="act" href="${esc(mail)}">Ask Chris directly</a></div>`:''}</div>`;
+}
+
+const FOLLOW={Overview:['What results has he delivered?','Tell me about his experience'],Highlights:['How was the value figure calculated?','Team and budget size?'],
+  Experience:['What results has he delivered?','Has he spoken at events?'],Featured:['What awards has he won?','How do I contact him?'],
+  Awards:['Has he been published?','Who is Chris?'],Education:['Tell me about his experience','What tech does he know?'],
+  'Tech Specs':['Has he worked with APIs?','What are his focus points?'],'Focus Points':['What tech does he know?','Tell me about his experience'],
+  contact:['Who is Chris?','What results has he delivered?'],none:['Who is Chris?','How do I contact him?'],Footer:['What results has he delivered?','How do I contact him?']};
+const LEAD={Highlights:'Here are the headline results, taken straight from the page.',Experience:"Here's the relevant experience.",
+  Featured:"Here's what the page lists under Featured & Speaking.",Awards:'Here are the awards listed on the page.',Education:'Here is the education listed on the page.',
+  'Tech Specs':"Here's the relevant part of the tech specs.",'Focus Points':'Here are the matching focus points.'};
+
+function respond(q){
+  const r=retrieve(q);
+  if(r.kind==='overview') return {rich:true,html:profileCard()+`<span class="rsrc">From this page: Overview</span>`+follow(FOLLOW.Overview)};
+  if(r.kind==='missing') return {rich:true,html:noneCard(`${r.noteMissing}, so I won't guess.`)+follow(FOLLOW.none)};
+  if(r.kind==='none') return {rich:true,html:noneCard("That isn't covered on this page, so I won't guess.")+follow(FOLLOW.none)};
+  if(/\b(calculat\w*|method\w*|derive\w*|worked out|work out|assum\w*|how (is|was|are|were) .*(figure|number|value))/i.test(q)){
+    const notes=r.U.filter(u=>u.src==='Footer'&&/calculat|assum|figure|published/i.test(u.text));
+    if(notes.length) return {rich:true,html:lead("Here's how the figures are calculated, from the page's footnotes.")+`<div class="notecard">${notes.map(u=>`<p>${linkify(u.text)}</p>`).join('')}</div>`+`<span class="rsrc">From this page: Footnotes</span>`+follow(['What results has he delivered?','How do I contact him?'])};
   }
-  if(!scored.length||scored[0].s<0.6){
-    return `That isn't covered on this page, so I won't guess.${askDirect()}`;
-  }
-  const best=scored[0].s, picks=scored.filter(x=>x.s>=best*0.55).slice(0,3).map(x=>x.u);
-  const note=noteMissing?`${noteMissing}, so I can't speak to that.`:'';
-  return render(picks,note);
+  const picks=r.picks, top=picks[0].src;
+  const wantsCV=/\b(cv|resume|résumé)\b/i.test(q), wantsContact=/\b(contact|email|e-mail|hire|reach|touch|available|availability|notice)\b/i.test(q);
+  let kind=top;
+  if(wantsCV||top==='Contact'||top==='Availability'||(wantsContact&&top==='Footer')) kind='contact';
+  const builders={Overview:()=>profileCard(),Highlights:()=>resultsCarousel(),Experience:u=>roleCards(u),Featured:u=>featuredCards(u),
+    Awards:()=>awardBadges(),Education:()=>eduCards(),'Tech Specs':u=>skillsBlock(u),'Focus Points':u=>focusCards(u),contact:()=>contactCard()};
+  if(!builders[kind]) return {rich:false,html:render(picks,r.noteMissing?`${r.noteMissing}, so I can't speak to that.`:'')+follow(FOLLOW[kind]||FOLLOW.none)};
+  const mine=kind==='contact'?picks.filter(u=>['Contact','Availability','Footer'].includes(u.src)):picks.filter(u=>u.src===top);
+  const others=picks.filter(u=>!mine.includes(u)&&u.src!=='Footer'&&!(kind==='Awards'&&u.src==='Featured')).slice(0,1);
+  let html=lead(LEAD[kind])+builders[kind](mine);
+  if(others.length) html+=`<div class="also"><small>Also on this page</small>${others.map(u=>`<p>${linkify(u.text)}</p>`).join('')}</div>`;
+  if(r.noteMissing) html+=`<p class="miss">${r.noteMissing}, so I can't speak to that.</p>`;
+  const start=kind==='Highlights'?Math.max(0,$all('#strip .hl').indexOf(mine[0].el)):0;
+  return {rich:true,html:html+srcLine(mine.concat(others))+follow(FOLLOW[kind]||FOLLOW.none),start};
+}
+
+/* Carousel dots + starting card */
+function wire(node,res){
+  node.querySelectorAll('.rc').forEach(rc=>{
+    const dots=[...rc.nextElementSibling.querySelectorAll('i')], cards=[...rc.children];
+    const sync=()=>{const i=Math.round(rc.scrollLeft/((cards[1]?cards[1].offsetLeft-cards[0].offsetLeft:1)||1));dots.forEach((d,k)=>d.classList.toggle('on',k===Math.min(i,dots.length-1)));};
+    rc.addEventListener('scroll',()=>requestAnimationFrame(sync),{passive:true});
+    if(res&&res.start&&cards[res.start]) rc.scrollLeft=cards[res.start].offsetLeft-cards[0].offsetLeft;
+    sync();
+  });
 }
 
 const panel=document.getElementById('twin'),msgs=document.getElementById('msgs'),qi=document.getElementById('q');
 function add(html,who){const d=document.createElement('div');d.className='m '+who;who==='me'?d.textContent=html:d.innerHTML=html;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;return d;}
-function ask(q){if(!q.trim())return;add(q,'me');const t=add('<span class="typing"><i></i><i></i><i></i></span>','bot');setTimeout(()=>{t.innerHTML=answer(q);msgs.scrollTop=msgs.scrollHeight;},650);}
+function ask(q){if(!q.trim())return;document.getElementById('chips').style.display='none';const me=add(q,'me');const t=add('<span class="typing"><i></i><i></i><i></i></span>','bot');setTimeout(()=>{let r;try{r=respond(q);}catch(e){r={rich:false,html:answer(q)};}t.className='m bot'+(r.rich?' rich':'');t.innerHTML=r.html;wire(t,r);msgs.scrollTop=Math.max(0,me.offsetTop-8);},650);}
 let started=false;
 function openTwin(){panel.classList.add('open');if(!started){started=true;add("Hi! I'm Chris's Digital Twin. Looking for a specific skill or experience?",'bot');}setTimeout(()=>qi.focus(),200);}
 document.querySelectorAll('[data-open-twin]').forEach(b=>b.addEventListener('click',openTwin));
 panel.querySelector('.close').addEventListener('click',()=>panel.classList.remove('open'));
+const exb=panel.querySelector('.expand');exb.addEventListener('click',()=>{const on=panel.classList.toggle('big');exb.setAttribute('aria-pressed',on);exb.textContent=on?'⤡':'⤢';});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')panel.classList.remove('open');});
-msgs.addEventListener('click',e=>{if(e.target.matches('[data-close]'))panel.classList.remove('open');});
+msgs.addEventListener('click',e=>{if(e.target.closest('[data-close]'))panel.classList.remove('open');const nb=e.target.closest('.next button');if(nb)ask(nb.textContent);});
 document.getElementById('pform').addEventListener('submit',e=>{e.preventDefault();ask(qi.value);qi.value='';});
 ['What results has he delivered?','Team and budget size?','Awards?','Is he available?'].forEach(t=>{const c=document.createElement('button');c.className='chipq';c.type='button';c.textContent=t;c.onclick=()=>ask(t);document.getElementById('chips').appendChild(c);});
 </script>
