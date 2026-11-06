@@ -1697,7 +1697,7 @@ function wire(node,res){
 
 const panel=document.getElementById('twin'),msgs=document.getElementById('msgs'),qi=document.getElementById('q');
 function add(html,who){const d=document.createElement('div');d.className='m '+who;who==='me'?d.textContent=html:d.innerHTML=html;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;return d;}
-function ask(q){if(!q.trim())return;document.getElementById('chips').style.display='none';const me=add(q,'me');const t=add('<span class="typing"><i></i><i></i><i></i></span>','bot');setTimeout(()=>{let r;try{r=respond(q);}catch(e){r={rich:false,html:answer(q)};}t.className='m bot'+(r.rich?' rich':'');t.innerHTML=r.html;wire(t,r);msgs.scrollTop=Math.max(0,me.offsetTop-8);},650);}
+function ask(q){if(!q.trim())return;document.getElementById('chips').style.display='none';const me=add(q,'me');const t=add('<span class="typing"><i></i><i></i><i></i></span>','bot');setTimeout(()=>{let r;try{r=respond(q);}catch(e){r={rich:false,html:answer(q)};}t.className='m bot'+(r.rich?' rich':'');t.innerHTML=r.html;wire(t,r);msgs.scrollTop=Math.max(0,me.getBoundingClientRect().top-msgs.getBoundingClientRect().top+msgs.scrollTop-8);},650);}
 let started=false;
 function openTwin(){panel.classList.add('open');if(!started){started=true;add("Hi! I'm Chris's Digital Twin. Looking for a specific skill or experience?",'bot');}setTimeout(()=>qi.focus(),200);}
 document.querySelectorAll('[data-open-twin]').forEach(b=>b.addEventListener('click',openTwin));
